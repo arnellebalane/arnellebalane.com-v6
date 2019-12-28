@@ -33,7 +33,6 @@ ul {
 li {
   margin: 0 1.6rem;
 
-  font-family: "Roboto Mono", monospace;
   font-size: 1.4rem;
 }
 </style>
@@ -48,16 +47,16 @@ li {
          rel="prefetch" so that Sapper prefetches the blog data when we hover
          over the  link or tap on it on a touchscreen. -->
 
-    <li>
+    <li class="font-mono">
       <a class:selected={segment === 'blog'} rel="prefetch" href="blog">Blog</a>
     </li>
-    <li>
+    <li class="font-mono">
       <a class:selected={segment === 'events'} rel="prefetch" href="events">Events</a>
     </li>
-    <li>
+    <li class="font-mono">
       <a class:selected={segment === 'projects'} rel="prefetch" href="projects">Projects</a>
     </li>
-    <li>
+    <li class="font-mono">
       <a class:selected={segment === 'about'} href="about">About</a>
     </li>
   </ul>
