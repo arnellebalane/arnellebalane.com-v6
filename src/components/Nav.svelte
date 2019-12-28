@@ -32,6 +32,9 @@ ul {
 
 li {
   margin: 0 1.6rem;
+
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.4rem;
 }
 </style>
 
