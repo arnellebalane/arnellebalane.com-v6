@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "arnellebalane.com",
+  "description": "Arnelle's personal website",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
