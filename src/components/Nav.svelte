@@ -3,64 +3,59 @@
 </script>
 
 <style>
-  nav {
-    border-bottom: 1px solid rgba(255, 62, 0, 0.1);
-    font-weight: 300;
-    padding: 0 1em;
-  }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  ul {
-    margin: 0;
-    padding: 0;
-  }
+  padding: 5rem 8rem;
+}
 
-  /* clearfix */
-  ul::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
+a {
+  text-decoration: none;
+}
 
-  li {
-    display: block;
-    float: left;
-  }
+h1 {
+  margin: 0;
 
-  .selected {
-    position: relative;
-    display: inline-block;
-  }
+  font-size: 1.8rem;
+  font-weight: 900;
+}
 
-  .selected::after {
-    position: absolute;
-    content: "";
-    width: calc(100% - 1em);
-    height: 2px;
-    background-color: rgb(255, 62, 0);
-    display: block;
-    bottom: -1px;
-  }
+ul {
+  display: flex;
+  margin: 0 -1.6rem 0 0;
+  padding: 0;
 
-  a {
-    text-decoration: none;
-    padding: 1em 0.5em;
-    display: block;
-  }
+  list-style: none;
+}
+
+li {
+  margin: 0 1.6rem;
+}
 </style>
 
 <nav>
-  <ul>
-    <li>
-      <a class:selected={segment === undefined} href=".">home</a>
-    </li>
-    <li>
-      <a class:selected={segment === 'about'} href="about">about</a>
-    </li>
+  <a href="/">
+    <h1>arnellebalane</h1>
+  </a>
 
-    <!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-         the blog data when we hover over the link or tap it on a touchscreen -->
+  <ul>
+    <!-- For the links to pages that contain dynamic data, we're using
+         rel="prefetch" so that Sapper prefetches the blog data when we hover
+         over the  link or tap on it on a touchscreen. -->
+
     <li>
-      <a rel="prefetch" class:selected={segment === 'blog'} href="blog">blog</a>
+      <a class:selected={segment === 'blog'} rel="prefetch" href="blog">Blog</a>
+    </li>
+    <li>
+      <a class:selected={segment === 'events'} rel="prefetch" href="events">Events</a>
+    </li>
+    <li>
+      <a class:selected={segment === 'projects'} rel="prefetch" href="projects">Projects</a>
+    </li>
+    <li>
+      <a class:selected={segment === 'about'} href="about">About</a>
     </li>
   </ul>
 </nav>
