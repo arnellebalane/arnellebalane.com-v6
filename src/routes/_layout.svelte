@@ -6,12 +6,12 @@
 
 <style>
   main {
-    max-width: 56em;
+    max-width: 68rem;
   }
 </style>
 
 <Nav {segment} />
 
-<main class="relative p-8 mx-auto">
+<main class="relative p-5 mx-auto">
   <slot />
 </main>
