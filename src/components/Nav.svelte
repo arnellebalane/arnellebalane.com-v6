@@ -1,63 +1,47 @@
 <script>
   export let segment;
+
+  let links = [
+    { label: 'Blog', href: 'blog', prefetch: true },
+    { label: 'Events', href: 'events', prefetch: true },
+    { label: 'Projects', href: 'projects', prefetch: true },
+    { label: 'About', href: 'about' }
+  ];
 </script>
 
 <style>
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 5rem 8rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-h1 {
-  margin: 0;
-
-  font-size: 1.8rem;
-  font-weight: 900;
-}
-
 ul {
-  display: flex;
-  margin: 0 -1.6rem 0 0;
-  padding: 0;
-
-  list-style: none;
+  counter-reset: number;
 }
 
-li {
-  margin: 0 1.6rem;
+li::before {
+  content: "0" counter(number) ". ";
+  counter-increment: number;
 
-  font-size: 1.4rem;
+  color: var(--primary-color);
 }
 </style>
 
-<nav>
+<nav class="flex justify-between items-center px-20 py-12">
   <a href="/">
-    <h1>arnellebalane</h1>
+    <h1 class="font-black text-lg">arnellebalane</h1>
   </a>
 
-  <ul>
+  <ul class="flex -mr-4">
     <!-- For the links to pages that contain dynamic data, we're using
          rel="prefetch" so that Sapper prefetches the blog data when we hover
          over the  link or tap on it on a touchscreen. -->
 
-    <li class="font-mono">
-      <a class:selected={segment === 'blog'} rel="prefetch" href="blog">Blog</a>
-    </li>
-    <li class="font-mono">
-      <a class:selected={segment === 'events'} rel="prefetch" href="events">Events</a>
-    </li>
-    <li class="font-mono">
-      <a class:selected={segment === 'projects'} rel="prefetch" href="projects">Projects</a>
-    </li>
-    <li class="font-mono">
-      <a class:selected={segment === 'about'} href="about">About</a>
-    </li>
+    {#each links as link (link.href)}
+      <li class="font-mono text-sm mx-4">
+        <a
+          href={link.href}
+          class:selected={segment === link.href}
+          rel={link.prefetch ? 'prefetch' : ''}
+        >
+          {link.label}
+        </a>
+      </li>
+    {/each}
   </ul>
 </nav>

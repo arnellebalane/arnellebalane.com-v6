@@ -1,11 +1,6 @@
 @tailwind base;
 @tailwind utilities;
 
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6rem;
-  color: #1a1a1a;
+:root {
+  --primary-color: #c13355;
 }
