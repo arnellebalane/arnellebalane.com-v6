@@ -14,7 +14,7 @@ ul {
   counter-reset: number;
 }
 
-li::before {
+li a::before {
   content: "0" counter(number) ". ";
   counter-increment: number;
 
