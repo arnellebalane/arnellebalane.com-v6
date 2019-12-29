@@ -1,4 +1,6 @@
 <script>
+  import FeaturedProjectLink from './FeaturedProjectLink.svelte';
+
   export let project;
   export let layout = 'left';
 
@@ -27,5 +29,14 @@
 
   <div class="w-1/2" class:pr-10={reverse} class:pl-10={!reverse}>
     <img src={project.image} alt={project.title} class="border-solid border-4 rounded">
+
+    <div class="text-center -mt-4">
+      {#if project.repo}
+        <FeaturedProjectLink href={project.repo}>Repo</FeaturedProjectLink>
+      {/if}
+      {#if project.url}
+        <FeaturedProjectLink href={project.url}>Visit Site</FeaturedProjectLink>
+      {/if}
+    </div>
   </div>
 </div>
