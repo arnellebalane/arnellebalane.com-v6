@@ -1,7 +1,3 @@
 module.exports = {
-  '*.{js,svelte}': [
-    'eslint',
-    'prettier',
-    'git add .'
-  ]
+  '*.{js,svelte}': ['eslint --fix', 'prettier --write', 'git add']
 };
