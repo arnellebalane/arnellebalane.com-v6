@@ -4,15 +4,20 @@ module.exports = {
     es6: true
   },
   extends: ['eslint:recommended', 'prettier'],
-  plugins: ['prettier'],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  rules: {
-    'prettier/prettier': 'error'
-  },
+  rules: {},
   overrides: [
+    {
+      files: ['src/**/*.svelte'],
+      processor: 'svelte3/svelte3',
+      plugins: ['svelte3'],
+      globals: {
+        process: true
+      }
+    },
     {
       files: ['src/server.js', 'src/routes/api/**/*.js'],
       env: {
