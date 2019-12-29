@@ -1,4 +1,4 @@
-<section class="flex pt-24">
+<section class="flex pt-24 pb-32">
   <img src="avatar.jpg" alt="Arnelle Balane" class="w-64 h-80 mr-8 rounded-lg object-cover object-center">
 
   <div class="max-w-lg my-4">
