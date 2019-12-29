@@ -7,8 +7,8 @@
 </script>
 
 <script>
-  import Hero from '../components/Hero.svelte';
-  import FeaturedProjects from '../components/FeaturedProjects.svelte';
+  import HeroSection from '../components/HeroSection.svelte';
+  import FeaturedProjectsSection from '../components/FeaturedProjectsSection.svelte';
 
   export let featuredProjects = [];
 </script>
@@ -17,5 +17,5 @@
   <title>Arnelle Balane</title>
 </svelte:head>
 
-<Hero />
-<FeaturedProjects projects={featuredProjects} />
+<HeroSection />
+<FeaturedProjectsSection projects={featuredProjects} />
