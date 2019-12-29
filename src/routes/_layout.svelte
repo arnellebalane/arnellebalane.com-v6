@@ -1,5 +1,5 @@
 <script>
-  import Nav from "../components/Nav.svelte";
+  import Nav from '../components/Nav.svelte';
 
   export let segment;
 </script>
@@ -13,5 +13,5 @@
 <Nav {segment} />
 
 <main class="relative p-5 mx-auto">
-  <slot></slot>
+  <slot />
 </main>
