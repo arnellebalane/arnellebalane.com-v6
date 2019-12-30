@@ -15,5 +15,6 @@ jobs:
           urls: |
             https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/
           temporaryPublicStorage: true
+          budgetPath: ./budget.json
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}

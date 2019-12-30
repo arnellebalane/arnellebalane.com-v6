@@ -1,0 +1,34 @@
+[
+  {
+    "resourceSizes": [
+      {
+        "resourceType": "document",
+        "budget": 10
+      },
+      {
+        "resourceType": "script",
+        "budget": 120
+      },
+      {
+        "resourceType": "image",
+        "budget": 100
+      },
+      {
+        "resourceType": "stylesheet",
+        "budget": 15
+      },
+      {
+        "resourceType": "media",
+        "budget": 0
+      },
+      {
+        "resourceType": "font",
+        "budget": 40
+      },
+      {
+        "resourceType": "total",
+        "budget": 285
+      }
+    ]
+  }
+]
