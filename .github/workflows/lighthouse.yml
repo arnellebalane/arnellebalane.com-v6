@@ -14,9 +14,6 @@ jobs:
         with:
           urls: |
             https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/
+          temporaryPublicStorage: true
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
-      - uses: actions/upload-artifact@v1
-        with:
-          name: lighthouse-results
-          path: '.lighthouseci'
