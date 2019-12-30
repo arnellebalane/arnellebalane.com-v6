@@ -1,7 +1,7 @@
 <script>
   export let segment;
 
-  let links = [
+  const links = [
     { label: 'Blog', href: 'blog', prefetch: true },
     { label: 'Events', href: 'events', prefetch: true },
     { label: 'Projects', href: 'projects', prefetch: true },
@@ -10,16 +10,16 @@
 </script>
 
 <style>
-ul {
-  counter-reset: number;
-}
+  ul {
+    counter-reset: number;
+  }
 
-li a::before {
-  content: "0" counter(number) ". ";
-  counter-increment: number;
+  li a::before {
+    content: '0' counter(number) '. ';
+    counter-increment: number;
 
-  color: var(--primary-color);
-}
+    color: var(--primary-color);
+  }
 </style>
 
 <nav class="flex justify-between items-center px-20 py-12">
@@ -34,11 +34,7 @@ li a::before {
 
     {#each links as link (link.href)}
       <li class="font-mono text-sm mx-4">
-        <a
-          href={link.href}
-          class:selected={segment === link.href}
-          rel={link.prefetch ? 'prefetch' : ''}
-        >
+        <a href={link.href} class:selected={segment === link.href} rel={link.prefetch ? 'prefetch' : ''}>
           {link.label}
         </a>
       </li>

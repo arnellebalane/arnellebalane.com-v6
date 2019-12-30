@@ -4,7 +4,7 @@
   export let project;
   export let layout = 'left';
 
-  let reverse = layout === 'right';
+  const reverse = layout === 'right';
 </script>
 
 <style>
@@ -28,7 +28,7 @@
   </div>
 
   <div class="w-1/2" class:pr-10={reverse} class:pl-10={!reverse}>
-    <img src={project.image} alt={project.title} class="border-solid border-4 rounded">
+    <img src={project.image} alt={project.title} class="border-solid border-4 rounded" />
 
     <div class="text-center -mt-4">
       {#if project.repo}
