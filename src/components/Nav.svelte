@@ -1,7 +1,7 @@
 <script>
   export let segment;
 
-  let links = [
+  const links = [
     { label: 'Blog', href: 'blog', prefetch: true },
     { label: 'Events', href: 'events', prefetch: true },
     { label: 'Projects', href: 'projects', prefetch: true },

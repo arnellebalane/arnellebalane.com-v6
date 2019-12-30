@@ -4,7 +4,7 @@
   export let project;
   export let layout = 'left';
 
-  let reverse = layout === 'right';
+  const reverse = layout === 'right';
 </script>
 
 <style>
