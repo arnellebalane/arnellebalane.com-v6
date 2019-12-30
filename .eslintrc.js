@@ -1,14 +1,24 @@
 module.exports = {
   env: {
     browser: true,
-    es6: true
+    es6: true,
+    serviceworker: true
   },
-  extends: ['eslint:recommended', 'prettier'],
+  extends: ['eslint:recommended', 'airbnb-base', 'prettier'],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  rules: {},
+  rules: {
+    'no-console': ['error', { allow: ['warn', 'error'] }],
+    'no-restricted-globals': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'import/no-mutable-exports': 'off',
+    'import/no-unresolved': 'off',
+    'import/prefer-default-export': 'off',
+    'import/first': 'off'
+  },
   overrides: [
     {
       files: ['src/**/*.svelte'],
@@ -31,6 +41,9 @@ module.exports = {
       },
       parserOptions: {
         sourceType: 'script'
+      },
+      rules: {
+        'global-require': 'off'
       }
     }
   ]
