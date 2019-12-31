@@ -3,7 +3,7 @@
   font-style:  normal;
   font-weight: 300;
   font-display: swap;
-  src: url("Inter-300-normal.woff2") format("woff2"),
+  src: url("Inter-300-normal-subset.woff2") format("woff2"),
       url("Inter-300-normal.woff") format("woff");
 }
 
@@ -12,7 +12,7 @@
   font-style:  normal;
   font-weight: 400;
   font-display: swap;
-  src: url("Inter-400-normal.woff2") format("woff2"),
+  src: url("Inter-400-normal-subset.woff2") format("woff2"),
       url("Inter-400-normal.woff") format("woff");
 }
 @font-face {
@@ -20,7 +20,7 @@
   font-style:  italic;
   font-weight: 400;
   font-display: swap;
-  src: url("Inter-400-italic.woff2") format("woff2"),
+  src: url("Inter-400-italic-subset.woff2") format("woff2"),
       url("Inter-400-italic.woff") format("woff");
 }
 
@@ -29,7 +29,7 @@
   font-style:  normal;
   font-weight: 700;
   font-display: swap;
-  src: url("Inter-700-normal.woff2") format("woff2"),
+  src: url("Inter-700-normal-subset.woff2") format("woff2"),
       url("Inter-700-normal.woff") format("woff");
 }
 @font-face {
@@ -37,7 +37,7 @@
   font-style:  italic;
   font-weight: 700;
   font-display: swap;
-  src: url("Inter-700-italic.woff2") format("woff2"),
+  src: url("Inter-700-italic-subset.woff2") format("woff2"),
       url("Inter-700-italic.woff") format("woff");
 }
 
@@ -46,7 +46,7 @@
   font-style:  normal;
   font-weight: 900;
   font-display: swap;
-  src: url("Inter-900-normal.woff2") format("woff2"),
+  src: url("Inter-900-normal-subset.woff2") format("woff2"),
       url("Inter-900-normal.woff") format("woff");
 }
 @font-face {
@@ -54,7 +54,7 @@
   font-style:  italic;
   font-weight: 900;
   font-display: swap;
-  src: url("Inter-900-italic.woff2") format("woff2"),
+  src: url("Inter-900-italic-subset.woff2") format("woff2"),
       url("Inter-900-italic.woff") format("woff");
 }
 
@@ -64,7 +64,7 @@
   font-display: swap;
   font-style: normal;
   font-named-instance: "Regular";
-  src: url("Inter-variable-upright.woff2") format("woff2");
+  src: url("Inter-variable-upright-subset.woff2") format("woff2");
 }
 @font-face {
   font-family: "Inter Var";
@@ -72,5 +72,5 @@
   font-display: swap;
   font-style: italic;
   font-named-instance: "Italic";
-  src: url("Inter-variable-italic.woff2") format("woff2");
+  src: url("Inter-variable-italic-subset.woff2") format("woff2");
 }
