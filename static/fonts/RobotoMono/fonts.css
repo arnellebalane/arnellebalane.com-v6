@@ -3,6 +3,7 @@
   font-style:  normal;
   font-weight: 100;
   font-display: swap;
+  unicode-range: U+20-7E;
   src: url("RobotoMono-Thin-subset.ttf") format("truetype");
 }
 
@@ -11,6 +12,7 @@
   font-style:  normal;
   font-weight: 300;
   font-display: swap;
+  unicode-range: U+20-7E;
   src: url("RobotoMono-Light-subset.ttf") format("truetype");
 }
 
@@ -19,6 +21,7 @@
   font-style:  normal;
   font-weight: 400;
   font-display: swap;
+  unicode-range: U+20-7E;
   src: url("RobotoMono-Regular-subset.ttf") format("truetype");
 }
 
@@ -27,6 +30,7 @@
   font-style:  normal;
   font-weight: 500;
   font-display: swap;
+  unicode-range: U+20-7E;
   src: url("RobotoMono-Medium-subset.ttf") format("truetype");
 }
 
@@ -35,5 +39,6 @@
   font-style:  normal;
   font-weight: 700;
   font-display: swap;
+  unicode-range: U+20-7E;
   src: url("RobotoMono-Bold-subset.ttf") format("truetype");
 }
