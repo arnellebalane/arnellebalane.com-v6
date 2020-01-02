@@ -13,10 +13,10 @@
   }
 </style>
 
-<div class="flex py-20" class:flex-row-reverse={reverse}>
-  <div class="w-1/2" class:text-right={reverse} class:pl-10={reverse} class:pr-10={!reverse}>
-    <small class="font-mono text-sm text-primary block mt-10">Featured Project</small>
-    <h1 class="text-3xl font-black mb-5">{project.name}</h1>
+<div class="sm:flex py-12 sm:py-20 sm:-mx-5 xl:-mx-10" class:sm:flex-row-reverse={reverse}>
+  <div class="sm:w-1/2 sm:px-5 xl:px-10" class:sm:text-right={reverse}>
+    <small class="font-mono text-sm text-primary block md:mt-10">Featured Project</small>
+    <h1 class="text-2xl sm:text-3xl font-black mb-5">{project.name}</h1>
 
     <p class="mb-8">{project.description}</p>
 
@@ -27,7 +27,7 @@
     </ul>
   </div>
 
-  <div class="w-1/2" class:pr-10={reverse} class:pl-10={!reverse}>
+  <div class="w-4/5 sm:w-1/2 sm:px-5 xl:px-10 mx-auto mt-8 sm:m-0">
     <img src={project.image} alt={project.title} class="border-solid border-4 rounded" />
 
     <div class="text-center -mt-4">

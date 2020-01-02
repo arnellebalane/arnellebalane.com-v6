@@ -8,8 +8,8 @@
   }
 </script>
 
-<div class="overflow-hidden">
+<section>
   {#each projects as project, i}
     <FeaturedProject {project} layout={getLayout(i)} />
   {/each}
-</div>
+</section>
