@@ -16,5 +16,7 @@ jobs:
             https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/
           temporaryPublicStorage: true
           budgetPath: ./budget.json
+          upload.serverBaseUrl: ${{ secrets.LHCI_SERVER }}
+          upload.token: ${{ secrets.LHCI_TOKEN }}
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
