@@ -1,15 +1,21 @@
 <script context="module">
   export async function preload() {
-    const featuredProjects = await this.fetch('api/featured-projects.json').then(response => response.json());
-    return { featuredProjects };
+    const [featuredProjects, otherProjects] = await Promise.all([
+      this.fetch('api/featured-projects.json').then(response => response.json()),
+      this.fetch('api/projects.json').then(response => response.json())
+    ]);
+
+    return { featuredProjects, otherProjects };
   }
 </script>
 
 <script>
   import HeroSection from '../components/HeroSection.svelte';
   import FeaturedProjectsSection from '../components/FeaturedProjectsSection.svelte';
+  import OtherProjectsSection from '../components/OtherProjectsSection.svelte';
 
   export let featuredProjects = [];
+  export let otherProjects = [];
 </script>
 
 <svelte:head>
@@ -18,3 +24,4 @@
 
 <HeroSection />
 <FeaturedProjectsSection projects={featuredProjects} />
+<OtherProjectsSection projects={otherProjects} />
