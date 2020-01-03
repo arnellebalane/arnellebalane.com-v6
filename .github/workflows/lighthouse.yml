@@ -1,6 +1,9 @@
 name: Lighthouse
 on:
   pull_request:
+  push:
+    branches:
+      - master
 
 jobs:
   check-scores:
@@ -10,13 +13,23 @@ jobs:
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
+
       - uses: treosh/lighthouse-ci-action@v2
+        if: github.event_name == 'pull_request'
         with:
           urls: |
             https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/
-          temporaryPublicStorage: true
           budgetPath: ./budget.json
           upload.serverBaseUrl: ${{ secrets.LHCI_SERVER }}
           upload.token: ${{ secrets.LHCI_TOKEN }}
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
+
+      - uses: treosh/lighthouse-ci-action@v2
+        if: github.event_name == 'push'
+        with:
+          urls: |
+            https://arnellebalane-v6.netlify.com/
+          budgetPath: ./budget.json
+          upload.serverBaseUrl: ${{ secrets.LHCI_SERVER }}
+          upload.token: ${{ secrets.LHCI_TOKEN }}
