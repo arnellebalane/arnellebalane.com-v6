@@ -13,6 +13,7 @@
   import HeroSection from '../components/HeroSection.svelte';
   import FeaturedProjectsSection from '../components/FeaturedProjectsSection.svelte';
   import OtherProjectsSection from '../components/OtherProjectsSection.svelte';
+  import ContactSection from '../components/ContactSection.svelte';
 
   export let featuredProjects = [];
   export let otherProjects = [];
@@ -25,3 +26,4 @@
 <HeroSection />
 <FeaturedProjectsSection projects={featuredProjects} />
 <OtherProjectsSection projects={otherProjects} />
+<ContactSection />
