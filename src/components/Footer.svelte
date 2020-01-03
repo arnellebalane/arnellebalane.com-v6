@@ -28,17 +28,34 @@
 </script>
 
 <style>
+  /* Responsive breakpoint based on Tailwind's "md" breakpoint. */
   @media (max-width: 767px) {
     .links {
       filter: grayscale(1) brightness(10);
       mix-blend-mode: screen;
     }
   }
+
+  /* Responsive breakpoint based on Tailwind's "md" breakpoint. */
+  @media (min-width: 768px) {
+    footer {
+      min-height: 7.5rem;
+    }
+
+    .links::after {
+      content: '';
+      width: 2px;
+      height: 7.5rem;
+      margin-top: 2rem;
+      margin-left: 11px;
+      background-color: #1a202c;
+    }
+  }
 </style>
 
 <footer class="p-6 sm:p-8 font-mono text-center bg-gray-900 text-white">
   <ul
-    class="links md:fixed md:left-0 md:bottom-0 -mx-3 md:mx-12 mb-8 md:mb-40 flex md:flex-col flex-wrap justify-center"
+    class="links md:fixed md:left-0 md:bottom-0 -mx-3 md:mx-12 mb-8 md:mb-0 flex md:flex-col flex-wrap justify-center"
   >
     {#each links as link}
       <li class="mx-3 md:mx-0 md:my-3">
