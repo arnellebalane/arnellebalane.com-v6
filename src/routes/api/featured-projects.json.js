@@ -11,7 +11,7 @@ export async function get(req, res) {
     url: fields.url,
     repo: fields.repository,
     tags: fields.tags,
-    image: fields.image.fields.file.url
+    image: `${fields.image.fields.file.url}?fm=webp&q=80`
   }));
 
   res.setHeader('Content-Type', 'application/json');
