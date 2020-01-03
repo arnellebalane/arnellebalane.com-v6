@@ -2,6 +2,7 @@ import contentful from '../_lib/contentful';
 
 export async function get(req, res) {
   const entries = await contentful.getEntries({
+    order: '-sys.createdAt',
     content_type: 'project',
     'fields.is_featured': false
   });
