@@ -5,7 +5,10 @@
       this.fetch('api/projects.json').then(response => response.json())
     ]);
 
-    return { featuredProjects, otherProjects };
+    return {
+      featuredProjects: featuredProjects.slice(0, 2),
+      otherProjects: otherProjects.slice(0, 6)
+    };
   }
 </script>
 
