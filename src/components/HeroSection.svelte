@@ -2,7 +2,8 @@
   <img
     src="avatar.jpg"
     alt="Arnelle Balane"
-    class="w-32 md:w-64 h-40 md:h-80 mx-auto sm:mx-0 sm:mr-5 md:mr-8 rounded-lg object-cover object-center" />
+    class="w-32 md:w-64 h-40 md:h-80 mx-auto sm:mx-0 sm:mr-5 md:mr-8 rounded-lg object-cover object-center"
+  />
 
   <div class="max-w-lg my-4">
     <p class="mb-2">👋 Hello! My name is</p>
