@@ -5,15 +5,18 @@
       this.fetch('api/projects.json').then(response => response.json())
     ]);
 
-    return { featuredProjects, otherProjects };
+    return {
+      featuredProjects: featuredProjects.slice(0, 2),
+      otherProjects: otherProjects.slice(0, 6)
+    };
   }
 </script>
 
 <script>
-  import HeroSection from '../components/HeroSection.svelte';
-  import FeaturedProjectsSection from '../components/FeaturedProjectsSection.svelte';
-  import OtherProjectsSection from '../components/OtherProjectsSection.svelte';
-  import ContactSection from '../components/ContactSection.svelte';
+  import HeroSection from '@components/HeroSection.svelte';
+  import FeaturedProjectsSection from '@components/FeaturedProjectsSection.svelte';
+  import OtherProjectsSection from '@components/OtherProjectsSection.svelte';
+  import ContactSection from '@components/ContactSection.svelte';
 
   export let featuredProjects = [];
   export let otherProjects = [];
