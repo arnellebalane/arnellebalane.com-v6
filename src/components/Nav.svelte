@@ -39,7 +39,8 @@
 
   <ul
     class="sm:flex -mr-2 md:-mr-4 py-12 px-6 sm:p-0 fixed sm:static top-0 left-0 right-0 bottom-0 z-40 bg-white"
-    class:hidden={!menuOpen}>
+    class:hidden={!menuOpen}
+  >
     <!-- For the links to pages that contain dynamic data, we're using
          rel="prefetch" so that Sapper prefetches the blog data when we hover
          over the  link or tap on it on a touchscreen. -->
