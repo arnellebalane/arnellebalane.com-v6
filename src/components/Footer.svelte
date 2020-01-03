@@ -28,16 +28,20 @@
 </script>
 
 <style>
-  .links {
-    filter: grayscale(1) brightness(10);
-    mix-blend-mode: screen;
+  @media (max-width: 767px) {
+    .links {
+      filter: grayscale(1) brightness(10);
+      mix-blend-mode: screen;
+    }
   }
 </style>
 
 <footer class="p-6 sm:p-8 font-mono text-center bg-gray-900 text-white">
-  <ul class="links flex flex-wrap justify-center -mx-3 mb-8">
+  <ul
+    class="links md:fixed md:left-0 md:bottom-0 -mx-3 md:mx-12 mb-8 md:mb-40 flex md:flex-col flex-wrap justify-center"
+  >
     {#each links as link}
-      <li class="mx-3">
+      <li class="mx-3 md:mx-0 md:my-3">
         <a href={link.url} target="_blank" rel="noopener noreferrer">
           <img src={link.icon} alt="" />
         </a>
