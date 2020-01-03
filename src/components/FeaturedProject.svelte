@@ -7,12 +7,6 @@
   const reverse = layout === 'right';
 </script>
 
-<style>
-  img {
-    border-color: rgba(240, 240, 240, 0.5);
-  }
-</style>
-
 <div class="sm:flex py-12 sm:py-20 sm:-mx-5 xl:-mx-10" class:sm:flex-row-reverse={reverse}>
   <div class="sm:w-1/2 sm:px-5 xl:px-10" class:sm:text-right={reverse}>
     <small class="font-mono text-sm text-primary block md:mt-10">Featured Project</small>
@@ -22,13 +16,13 @@
 
     <ul class="inline-flex -mx-3">
       {#each project.tags as tag}
-        <li class="font-mono text-sm text-gray-600 mx-3">{tag}</li>
+        <li class="font-mono text-sm text-gray-700 mx-3">{tag}</li>
       {/each}
     </ul>
   </div>
 
   <div class="w-4/5 sm:w-1/2 sm:px-5 xl:px-10 mx-auto mt-8 sm:m-0">
-    <img src={project.image} alt={project.title} class="border-solid border-4 rounded" />
+    <img src={project.image} alt={project.title} class="border-4 border-solid border-gray-100 rounded" />
 
     <div class="text-center -mt-4">
       {#if project.repo}
