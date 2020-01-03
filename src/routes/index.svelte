@@ -10,10 +10,10 @@
 </script>
 
 <script>
-  import HeroSection from '../components/HeroSection.svelte';
-  import FeaturedProjectsSection from '../components/FeaturedProjectsSection.svelte';
-  import OtherProjectsSection from '../components/OtherProjectsSection.svelte';
-  import ContactSection from '../components/ContactSection.svelte';
+  import HeroSection from '@components/HeroSection.svelte';
+  import FeaturedProjectsSection from '@components/FeaturedProjectsSection.svelte';
+  import OtherProjectsSection from '@components/OtherProjectsSection.svelte';
+  import ContactSection from '@components/ContactSection.svelte';
 
   export let featuredProjects = [];
   export let otherProjects = [];
