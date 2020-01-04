@@ -12,7 +12,7 @@
   }
 </style>
 
-<section class="pt-20 sm:pt-40 pb-10 sm:pb-20">
+<section class="pt-24 sm:pt-48 pb-10 sm:pb-20">
   <h1 class="text-2xl sm:text-3xl font-black text-center mb-10">Other Projects</h1>
 
   <div class="grid">

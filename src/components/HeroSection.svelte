@@ -1,4 +1,4 @@
-<section class="flex flex-col-reverse sm:flex-row pt-12 md:pt-24 pb-16 md:pb-32">
+<section class="flex flex-col-reverse sm:flex-row pt-12 md:pt-24 pb-20 md:pb-40">
   <img
     src="avatar.jpg"
     alt="Arnelle Balane"
