@@ -20,4 +20,10 @@
       <OtherProject {project} />
     {/each}
   </div>
+
+  <footer class="text-center mt-8">
+    <a href="projects" class="inline-block px-6 py-3 font-mono text-sm text-white bg-primary rounded">
+      View all projects
+    </a>
+  </footer>
 </section>
