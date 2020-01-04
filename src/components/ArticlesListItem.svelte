@@ -62,7 +62,7 @@
       />
     {/if}
 
-    <a href={article.url}>
+    <a href={article.url} target={article.source ? '_blank' : ''} rel={article.source ? 'noopener noreferrer' : ''}>
       <h1 class="text-2xl sm:text-3xl font-bold leading-snug">{article.title}</h1>
     </a>
   </header>
@@ -76,6 +76,8 @@
       class="mx-4"
       class:text-medium-green={article.source === 'medium'}
       class:text-devto-purple={article.source === 'devto'}
+      target={article.source ? '_blank' : ''}
+      rel={article.source ? 'noopener noreferrer' : ''}
     >
       Read more {formatSource(article.source)}
     </a>
