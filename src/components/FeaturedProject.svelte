@@ -21,7 +21,7 @@
     </ul>
   </div>
 
-  <div class="w-4/5 sm:w-1/2 sm:px-5 xl:px-10 mx-auto mt-8 sm:m-0">
+  <div class="max-w-sm sm:max-w-full sm:w-1/2 sm:px-5 xl:px-10 mx-auto mt-8 sm:m-0">
     <img src={project.image} alt={project.title} class="border-4 border-solid border-gray-100 rounded" />
 
     <div class="text-center -mt-4">
