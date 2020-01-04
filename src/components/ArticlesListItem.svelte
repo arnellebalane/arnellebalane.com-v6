@@ -19,12 +19,12 @@
   }
 
   function getImageSrcset(image) {
-    return `
-      ${image}?fm=webp&q=80&w=400 400w,
-      ${image}?fm=webp&q=80&w=560 560w,
-      ${image}?fm=webp&q=80&w=730 730w,
-      ${image}?fm=webp&q=80&w=840 840w
-    `;
+    return [
+      `${image}?fm=webp&q=80&w=400 400w`,
+      `${image}?fm=webp&q=80&w=560 560w`,
+      `${image}?fm=webp&q=80&w=730 730w`,
+      `${image}?fm=webp&q=80&w=840 840w`
+    ].join(',');
   }
 </script>
 
@@ -79,6 +79,8 @@
           sizes="(min-width: 1280px) 400px, (min-width: 768px) 80vw, 100vw"
           alt={article.title}
           loading="lazy"
+          width="160px"
+          height="90px"
           class="absolute inset-0 w-full h-full rounded-t-lg xl:rounded-b-lg object-cover object-center"
         />
       </div>
