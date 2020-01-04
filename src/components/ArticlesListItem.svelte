@@ -17,6 +17,15 @@
         return '';
     }
   }
+
+  function getImageSrcset(image) {
+    return `
+      ${image}?fm=webp&q=80&w=400 400w,
+      ${image}?fm=webp&q=80&w=560 560w,
+      ${image}?fm=webp&q=80&w=730 730w,
+      ${image}?fm=webp&q=80&w=840 840w
+    `;
+  }
 </script>
 
 <style>
@@ -55,7 +64,9 @@
   <header class="mb-4 sm:mb-8">
     {#if article.cover_image}
       <img
-        src={article.cover_image}
+        src={`${article.cover_image}?fm=webp&q=80&w=400`}
+        srcset={getImageSrcset(article.cover_image)}
+        sizes="(min-width: 1280px) 400px, (min-width: 768px) 80vw, 100vw"
         alt={article.title}
         class="xl:w-full -m-5 mb-5 sm:-m-10 sm:mb-10 rounded-t-lg xl:rounded-b-lg xl:absolute xl:right-0 xl:m-0
         xl:-mr-48 xl:max-w-sm xl:shadow-xl"

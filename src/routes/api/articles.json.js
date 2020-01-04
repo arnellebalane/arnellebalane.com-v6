@@ -15,7 +15,7 @@ export async function get(req, res) {
       categories: fields.categories
     };
     if (fields.cover_image) {
-      entry.cover_image = `${fields.cover_image.fields.file.url}?fm=webp&q=80`;
+      entry.cover_image = fields.cover_image.fields.file.url;
     }
     return entry;
   });
