@@ -4,6 +4,8 @@
   export let articles = [];
 </script>
 
-{#each articles as article}
-  <ArticlesListItem {article} />
-{/each}
+<div class="mb-20 sm:mb-40">
+  {#each articles as article}
+    <ArticlesListItem {article} />
+  {/each}
+</div>
