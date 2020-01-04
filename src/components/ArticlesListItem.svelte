@@ -3,10 +3,20 @@
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
   }
 
+  img {
+    width: calc(100% + 2.5rem); /* 2.5rem = 2 * .mx-5 */
+  }
+
+  /* Responsive breakpoint based on Tailwind's "sm" and "xl" breakpoints. */
+  @media (min-width: 640px) and (max-width: 1279px) {
+    img {
+      width: calc(100% + 5rem); /* 5rem = 2 * .mx-10 */
+    }
+  }
+
   /* Responsive breakpoint based on Tailwind's "xl" breakpoint. */
   @media (max-width: 1279px) {
     img {
-      width: calc(100% + 5rem); /* 5rem = 2 * .mx-10 */
       max-width: initial;
     }
   }
@@ -20,15 +30,18 @@
   }
 </style>
 
-<article class="relative p-10 mb-12 border border-solid border-gray-100 rounded-lg xl:pr-56 xl:mr-48">
-  <header class="mb-8">
+<article class="relative p-5 mb-6 sm:p-10 sm:mb-12 border border-solid border-gray-100 rounded-lg xl:pr-56 xl:mr-48">
+  <header class="mb-4 sm:mb-8">
     <img
       src="/article.jpg"
       alt=""
-      class="xl:w-full -m-10 mb-10 rounded-lg xl:absolute xl:right-0 xl:m-0 xl:-mr-48 xl:max-w-sm xl:shadow-xl"
+      class="xl:w-full -m-5 mb-5 sm:-m-10 sm:mb-10 rounded-t-lg xl:rounded-b-lg xl:absolute xl:right-0 xl:m-0 xl:-mr-48
+      xl:max-w-sm xl:shadow-xl"
     />
 
-    <h1 class="text-3xl font-bold">Async Clipboard API: Accessing the clipboard using JavaScript</h1>
+    <a href="#">
+      <h1 class="text-2xl sm:text-3xl font-bold">Async Clipboard API: Accessing the clipboard using JavaScript</h1>
+    </a>
   </header>
 
   <p>
@@ -37,7 +50,7 @@
     both text and image data.
   </p>
 
-  <footer class="mt-12 -mx-4 text-gray-600">
+  <footer class="flex flex-wrap mt-6 sm:mt-12 -mx-4 text-gray-600">
     <time datetime="2019-09-06" class="mx-4">September 6, 2019</time>
     <a href="#" class="mx-4">Read more</a>
   </footer>
