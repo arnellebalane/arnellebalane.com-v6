@@ -40,7 +40,9 @@
     />
 
     <a href="#">
-      <h1 class="text-2xl sm:text-3xl font-bold">Async Clipboard API: Accessing the clipboard using JavaScript</h1>
+      <h1 class="text-2xl sm:text-3xl font-bold leading-snug">
+        Async Clipboard API: Accessing the clipboard using JavaScript
+      </h1>
     </a>
   </header>
 
