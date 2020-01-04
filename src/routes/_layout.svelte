@@ -11,10 +11,12 @@
   }
 </style>
 
-<Nav {segment} />
+<div class="flex flex-col min-h-screen">
+  <Nav {segment} />
 
-<main class="relative p-5 md:px-32 xl:px-5 mx-auto">
-  <slot />
-</main>
+  <main class="flex-grow relative p-5 md:px-32 xl:px-5 mx-auto">
+    <slot />
+  </main>
 
-<Footer />
+  <Footer />
+</div>
