@@ -7,7 +7,7 @@
   const reverse = layout === 'right';
 </script>
 
-<div class="sm:flex py-10 sm:py-16 sm:-mx-5 xl:-mx-10" class:sm:flex-row-reverse={reverse}>
+<div class="sm:flex sm:-mx-5 xl:-mx-10 my-20 sm:my-40" class:sm:flex-row-reverse={reverse}>
   <div class="sm:w-1/2 sm:px-5 xl:px-10" class:sm:text-right={reverse}>
     <small class="font-mono text-sm text-primary block md:mt-10">Featured Project</small>
     <h1 class="text-2xl sm:text-3xl font-black mb-5">{project.name}</h1>

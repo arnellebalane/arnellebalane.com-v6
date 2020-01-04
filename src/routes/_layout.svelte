@@ -14,7 +14,7 @@
 <div class="flex flex-col min-h-screen">
   <Nav {segment} />
 
-  <main class="flex-grow relative p-5 md:px-32 xl:px-5 mx-auto">
+  <main class="flex-grow relative px-5 md:px-32 xl:px-5 py-12 md:py-24 mx-auto">
     <slot />
   </main>
 

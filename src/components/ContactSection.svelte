@@ -1,4 +1,4 @@
-<div class="pt-20 sm:pt-40 pb-32 sm:pb-64">
+<section class="mt-24 sm:mt-56 mb-20 sm:mb-40">
   <h1 class="text-2xl sm:text-3xl font-black text-center mb-8">Get In Touch</h1>
 
   <p class="max-w-lg mx-auto mb-6 text-center">
@@ -8,4 +8,4 @@
   </p>
 
   <p class="max-w-lg mx-auto mb-6 text-center">Have a great day! 🎉</p>
-</div>
+</section>
