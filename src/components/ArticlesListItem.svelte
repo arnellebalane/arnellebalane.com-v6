@@ -1,3 +1,24 @@
+<script>
+  import dayjs from 'dayjs';
+
+  export let article;
+
+  function formatDate(date) {
+    return dayjs(date).format('MMMM D, YYYY');
+  }
+
+  function formatSource(source) {
+    switch (source) {
+      case 'medium':
+        return 'on Medium';
+      case 'devto':
+        return 'on DEV';
+      default:
+        return '';
+    }
+  }
+</script>
+
 <style>
   article {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
@@ -32,28 +53,31 @@
 
 <article class="relative p-5 mb-6 sm:p-10 sm:mb-12 border border-solid border-gray-100 rounded-lg xl:pr-56 xl:mr-48">
   <header class="mb-4 sm:mb-8">
-    <img
-      src="/article.jpg"
-      alt=""
-      class="xl:w-full -m-5 mb-5 sm:-m-10 sm:mb-10 rounded-t-lg xl:rounded-b-lg xl:absolute xl:right-0 xl:m-0 xl:-mr-48
-      xl:max-w-sm xl:shadow-xl"
-    />
+    {#if article.cover_image}
+      <img
+        src={article.cover_image}
+        alt={article.title}
+        class="xl:w-full -m-5 mb-5 sm:-m-10 sm:mb-10 rounded-t-lg xl:rounded-b-lg xl:absolute xl:right-0 xl:m-0
+        xl:-mr-48 xl:max-w-sm xl:shadow-xl"
+      />
+    {/if}
 
-    <a href="#">
-      <h1 class="text-2xl sm:text-3xl font-bold leading-snug">
-        Async Clipboard API: Accessing the clipboard using JavaScript
-      </h1>
+    <a href={article.url}>
+      <h1 class="text-2xl sm:text-3xl font-bold leading-snug">{article.title}</h1>
     </a>
   </header>
 
-  <p>
-    Accessing the system clipboard has not been the most elegant thing to do for a long time. But this is about to
-    change with the new Async Clipboard API, which allows us to programatically write to and read from the clipboard
-    both text and image data.
-  </p>
+  <p>{article.description}</p>
 
-  <footer class="flex flex-wrap mt-6 sm:mt-12 -mx-4 text-gray-600">
-    <time datetime="2019-09-06" class="mx-4">September 6, 2019</time>
-    <a href="#" class="mx-4">Read more</a>
+  <footer class="flex flex-wrap mt-6 sm:mt-12 -mx-4 font-mono text-sm text-gray-600">
+    <time datetime={article.date} class="mx-4">{formatDate(article.date)}</time>
+    <a
+      href={article.url}
+      class="mx-4"
+      class:text-medium-green={article.source === 'medium'}
+      class:text-devto-purple={article.source === 'devto'}
+    >
+      Read more {formatSource(article.source)}
+    </a>
   </footer>
 </article>

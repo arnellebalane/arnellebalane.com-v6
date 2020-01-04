@@ -12,7 +12,9 @@ module.exports = {
         mono: ['"Roboto Mono"', ...defaultTheme.fontFamily.mono]
       },
       colors: {
-        primary: '#c13355'
+        primary: '#c13355',
+        'medium-green': '#02b875',
+        'devto-purple': '#4e57ef'
       },
       spacing: {
         72: '18rem',

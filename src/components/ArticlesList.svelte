@@ -1,7 +1,9 @@
 <script>
   import ArticlesListItem from './ArticlesListItem.svelte';
+
+  export let articles = [];
 </script>
 
-<ArticlesListItem />
-<ArticlesListItem />
-<ArticlesListItem />
+{#each articles as article}
+  <ArticlesListItem {article} />
+{/each}
