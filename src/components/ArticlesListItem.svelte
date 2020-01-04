@@ -68,6 +68,7 @@
         srcset={getImageSrcset(article.cover_image)}
         sizes="(min-width: 1280px) 400px, (min-width: 768px) 80vw, 100vw"
         alt={article.title}
+        loading="lazy"
         class="xl:w-full -m-5 mb-5 sm:-m-10 sm:mb-10 rounded-t-lg xl:rounded-b-lg xl:absolute xl:right-0 xl:m-0
         xl:-mr-48 xl:max-w-sm xl:shadow-xl"
       />
