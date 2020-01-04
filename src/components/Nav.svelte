@@ -5,9 +5,9 @@
   export let segment;
 
   const links = [
-    { label: 'Blog', href: 'blog', prefetch: true },
-    { label: 'Events', href: 'events', prefetch: true },
-    { label: 'Projects', href: 'projects', prefetch: true },
+    { label: 'Blog', href: 'blog' },
+    { label: 'Events', href: 'events' },
+    { label: 'Projects', href: 'projects' },
     { label: 'About', href: 'about' }
   ];
 
@@ -44,15 +44,9 @@
   <NavMenuButton open={menuOpen} on:click={toggleMenu} />
 
   <ul class="sm:flex -mr-2 md:-mr-4 py-12 px-6 sm:p-0 fixed sm:static inset-0 z-40 bg-white" class:hidden={!menuOpen}>
-    <!-- For the links to pages that contain dynamic data, we're using
-         rel="prefetch" so that Sapper prefetches the blog data when we hover
-         over the  link or tap on it on a touchscreen. -->
-
     {#each links as link (link.href)}
       <li class="font-mono text-sm py-4 sm:p-0 mx-2 md:mx-4">
-        <a href={link.href} class="block" class:selected={segment === link.href} rel={link.prefetch ? 'prefetch' : ''}>
-          {link.label}
-        </a>
+        <a href={link.href} class="block" class:selected={segment === link.href}>{link.label}</a>
       </li>
     {/each}
   </ul>
