@@ -1,4 +1,5 @@
 <script>
+  import { stores } from '@sapper/app';
   import NavMenuButton from './NavMenuButton.svelte';
 
   export let segment;
@@ -15,6 +16,11 @@
   function toggleMenu() {
     menuOpen = !menuOpen;
   }
+
+  const { page } = stores();
+  page.subscribe(() => {
+    menuOpen = false;
+  });
 </script>
 
 <style>
@@ -44,7 +50,7 @@
 
     {#each links as link (link.href)}
       <li class="font-mono text-sm py-4 sm:p-0 mx-2 md:mx-4">
-        <a href={link.href} class:selected={segment === link.href} rel={link.prefetch ? 'prefetch' : ''}>
+        <a href={link.href} class="block" class:selected={segment === link.href} rel={link.prefetch ? 'prefetch' : ''}>
           {link.label}
         </a>
       </li>
