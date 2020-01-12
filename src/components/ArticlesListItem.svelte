@@ -93,7 +93,7 @@
 
   <p>{article.description}</p>
 
-  <footer class="flex flex-wrap mt-6 sm:mt-12 -mx-4 font-mono text-sm text-gray-600">
+  <footer class="flex flex-wrap mt-6 sm:mt-12 -mx-4 font-mono text-base text-gray-600">
     <time datetime={article.date} class="mx-4">{formatDate(article.date)}</time>
     <a
       href={article.url}
