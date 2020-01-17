@@ -20,6 +20,9 @@ jobs:
           urls: |
             https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/
             https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/blog/
+            https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/events/
+            https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/projects/
+            https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/about/
           budgetPath: ./budget.json
           upload.serverBaseUrl: ${{ secrets.LHCI_SERVER }}
           upload.token: ${{ secrets.LHCI_TOKEN }}
@@ -32,6 +35,9 @@ jobs:
           urls: |
             https://arnellebalane-v6.netlify.com/
             https://arnellebalane-v6.netlify.com/blog/
+            https://arnellebalane-v6.netlify.com/events/
+            https://arnellebalane-v6.netlify.com/projects/
+            https://arnellebalane-v6.netlify.com/about/
           budgetPath: ./budget.json
           upload.serverBaseUrl: ${{ secrets.LHCI_SERVER }}
           upload.token: ${{ secrets.LHCI_TOKEN }}
