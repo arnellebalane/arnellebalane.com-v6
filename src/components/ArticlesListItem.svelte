@@ -17,9 +17,31 @@
         return '';
     }
   }
+
+  function getCoverImageSrc(coverImage) {
+    return `${coverImage}?w=350&fm=jpg&fl=progressive&q=85`;
+  }
 </script>
 
-<article class="mb-24 sm:mb-32">
+<style>
+  .cover-image::before {
+    content: '';
+    display: block;
+    padding-top: calc(100% / 16 * 9);
+  }
+</style>
+
+<article class="flex items-start py-10 mb-12">
+  <div class="hidden sm:block cover-image order-1 relative w-3/6 lg:w-2/6 max-w-sm ml-6">
+    {#if article.cover_image}
+      <img
+        src={getCoverImageSrc(article.cover_image)}
+        alt={article.title}
+        class="absolute inset-0 w-full h-full object-cover object-center rounded shadow-2xl"
+      />
+    {/if}
+  </div>
+
   <div class="max-w-2xl">
     <header class="mb-4 sm:mb-8">
       <a href={article.url} target={article.source ? '_blank' : ''} rel={article.source ? 'noopener noreferrer' : ''}>
