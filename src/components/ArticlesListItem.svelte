@@ -17,10 +17,6 @@
         return '';
     }
   }
-
-  function getCoverImageSrc(coverImage) {
-    return `${coverImage}?w=350&fm=jpg&fl=progressive&q=85`;
-  }
 </script>
 
 <style>
@@ -34,11 +30,15 @@
 <article class="flex items-start py-10 mb-12">
   <div class="hidden sm:block cover-image order-1 relative w-3/6 lg:w-2/6 max-w-sm ml-6">
     {#if article.cover_image}
-      <img
-        src={getCoverImageSrc(article.cover_image)}
-        alt={article.title}
-        class="absolute inset-0 w-full h-full object-cover object-center rounded shadow-2xl"
-      />
+      <picture>
+        <source srcset={`${article.cover_image}?w=350&fm=webp&q=85`} type="image/webp" />
+        <img
+          src={`${article.cover_image}?w=350&fm=jpg&fl=progressive&q=80`}
+          alt={article.title}
+          loading="lazy"
+          class="absolute inset-0 w-full h-full object-cover object-center rounded shadow-2xl"
+        />
+      </picture>
     {/if}
   </div>
 
