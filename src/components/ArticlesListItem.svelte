@@ -51,13 +51,13 @@
 
     <p>{article.description}</p>
 
-    <footer class="flex flex-wrap mt-4 sm:mt-8 -mx-4 font-mono text-base text-gray-600">
+    <footer class="flex flex-wrap mt-4 sm:mt-8 -mx-4 font-mono text-base text-gray-700">
       <time datetime={article.date} class="mx-4">{formatDate(article.date)}</time>
       <a
         href={article.url}
         class="mx-4"
-        class:text-medium-green={article.source === 'medium'}
-        class:text-devto-purple={article.source === 'devto'}
+        class:text-green-700={article.source === 'medium'}
+        class:text-indigo-700={article.source === 'devto'}
         target={article.source ? '_blank' : ''}
         rel={article.source ? 'noopener noreferrer' : ''}
       >
