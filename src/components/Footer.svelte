@@ -1,26 +1,32 @@
 <script>
   const links = [
     {
+      name: 'Github',
       icon: '/icons/github.svg',
       url: 'https://github.com/arnellebalane'
     },
     {
+      name: 'Twitter',
       icon: '/icons/twitter.svg',
       url: 'https://twitter.com/arnellebalane'
     },
     {
+      name: 'LinkedIn',
       icon: '/icons/linkedin.svg',
       url: 'https://www.linkedin.com/in/arnellebalane/'
     },
     {
+      name: 'Instagram',
       icon: '/icons/instagram.svg',
       url: 'https://www.instagram.com/arnellebalane/'
     },
     {
+      name: 'DEV',
       icon: '/icons/devto.svg',
       url: 'https://dev.to/arnellebalane'
     },
     {
+      name: 'Codepen',
       icon: '/icons/codepen.svg',
       url: 'https://codepen.io/arnellebalane'
     }
@@ -28,6 +34,10 @@
 </script>
 
 <style>
+  .links {
+    font-size: 0;
+  }
+
   /* Responsive breakpoint based on Tailwind's "md" breakpoint. */
   @media (max-width: 767px) {
     .links {
@@ -61,6 +71,7 @@
       <li class="mx-3 md:mx-0 md:my-3">
         <a href={link.url} target="_blank" rel="noopener noreferrer">
           <img src={link.icon} alt="" />
+          {link.name}
         </a>
       </li>
     {/each}
