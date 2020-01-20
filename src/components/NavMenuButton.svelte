@@ -2,7 +2,7 @@
   export let open = false;
 </script>
 
-<button class="sm:hidden relative z-50" on:click>
+<button class="sm:hidden relative z-50" aria-label="Nav menu button" on:click>
   {#if open}
     <svg viewBox="0 0 24 24" class="w-5 h-5 text-gray-900">
       <path

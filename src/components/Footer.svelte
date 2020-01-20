@@ -34,10 +34,6 @@
 </script>
 
 <style>
-  .links {
-    font-size: 0;
-  }
-
   /* Responsive breakpoint based on Tailwind's "md" breakpoint. */
   @media (max-width: 767px) {
     .links {
@@ -69,9 +65,8 @@
   >
     {#each links as link}
       <li class="mx-3 md:mx-0 md:my-3">
-        <a href={link.url} target="_blank" rel="noopener noreferrer">
+        <a href={link.url} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
           <img src={link.icon} alt="" />
-          {link.name}
         </a>
       </li>
     {/each}
