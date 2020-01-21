@@ -22,4 +22,6 @@
 </svelte:head>
 
 <UpcomingEventsList events={upcomingEvents} />
+
+<h4 class="mt-12 sm:mt-24 mb-8 text-base sm:text-lg font-black">Past events</h4>
 <PastEventsList events={pastEvents} />
