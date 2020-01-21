@@ -15,8 +15,8 @@
 
   <small
     class="block font-mono text-xs text-gray-700 uppercase"
-    class:text-pink-700={event.type === 'talk'}
-    class:text-orange-700={event.type === 'workshop'}
+    class:text-pink-800={event.type === 'talk'}
+    class:text-orange-800={event.type === 'workshop'}
   >
     {event.type}
   </small>
