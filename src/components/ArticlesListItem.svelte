@@ -28,7 +28,7 @@
 </style>
 
 <article class="flex items-start py-10 mb-12">
-  <div class="hidden sm:block cover-image order-1 relative w-3/6 lg:w-2/6 max-w-sm ml-6">
+  <div class="cover-image hidden sm:block order-1 relative w-3/6 lg:w-2/6 max-w-sm ml-6">
     {#if article.cover_image}
       <picture>
         <source srcset={`${article.cover_image}?w=350&fm=webp&q=85`} type="image/webp" />
