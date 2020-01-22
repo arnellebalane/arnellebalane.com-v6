@@ -8,9 +8,9 @@
   }
 </script>
 
-<article class="flex flex-col py-4 px-5 bg-gray-100 rounded">
+<article class="flex flex-col px-6 py-5 bg-gray-100 rounded">
   <a href={event.url} target="_blank" rel="noopener noreferrer">
-    <h1 class="mb-6 text-base sm:text-lg font-black">{event.name}</h1>
+    <h1 class="mb-6 text-lg sm:text-xl font-black">{event.name}</h1>
   </a>
 
   <small
@@ -20,9 +20,9 @@
   >
     {event.type}
   </small>
-  <h2 class="mb-auto text-base sm:text-lg font-normal">{event.session}</h2>
+  <h2 class="mb-auto text-base sm:text-base font-normal">{event.session}</h2>
 
-  <footer class="flex flex-wrap mt-10 font-mono text-sm text-gray-700">
+  <footer class="flex flex-wrap mt-10 font-mono text-xs text-gray-700">
     <time datetime={event.date}>{formatDate(event.date)}</time>
     <span class="mx-3">&middot;</span>
     <p>{event.location}</p>
