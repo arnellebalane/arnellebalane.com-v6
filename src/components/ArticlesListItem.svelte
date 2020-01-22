@@ -45,7 +45,7 @@
   <div class="max-w-2xl">
     <header class="mb-4 sm:mb-8">
       <a href={article.url} target={article.source ? '_blank' : ''} rel={article.source ? 'noopener noreferrer' : ''}>
-        <h1 class="text-2xl sm:text-3xl font-bold leading-snug">{article.title}</h1>
+        <h1 class="text-2xl sm:text-3xl font-black leading-snug">{article.title}</h1>
       </a>
     </header>
 

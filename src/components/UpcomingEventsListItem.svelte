@@ -10,7 +10,7 @@
 
 <article class="py-10 mb-12">
   <a href={event.url} target="_blank" rel="noopener noreferrer">
-    <h1 class="mb-6 text-2xl sm:text-3xl font-bold leading-snug">{event.name}</h1>
+    <h1 class="mb-6 text-2xl sm:text-3xl font-black leading-snug">{event.name}</h1>
   </a>
 
   <small
