@@ -16,4 +16,6 @@
   <title>Blog | Arnelle Balane</title>
 </svelte:head>
 
-<Articles {articles} />
+<div class="mb-20 sm:mb-40">
+  <Articles {articles} />
+</div>

@@ -21,7 +21,9 @@
   <title>Events | Arnelle Balane</title>
 </svelte:head>
 
-<UpcomingEvents events={upcomingEvents} />
+<div class="mb-20 sm:mb-40">
+  <UpcomingEvents events={upcomingEvents} />
 
-<h4 class="mt-12 sm:mt-24 mb-8 text-base sm:text-lg font-black">Past events</h4>
-<PastEvents events={pastEvents} />
+  <h4 class="mt-12 sm:mt-24 mb-8 text-base sm:text-lg font-black">Past events</h4>
+  <PastEvents events={pastEvents} />
+</div>
