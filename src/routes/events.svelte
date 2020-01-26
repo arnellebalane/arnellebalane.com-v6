@@ -7,8 +7,8 @@
 </script>
 
 <script>
-  import UpcomingEventsList from '@components/UpcomingEventsList.svelte';
-  import PastEventsList from '@components/PastEventsList.svelte';
+  import UpcomingEvents from '@components/UpcomingEvents.svelte';
+  import PastEvents from '@components/PastEvents.svelte';
 
   export let events = [];
 
@@ -21,7 +21,9 @@
   <title>Events | Arnelle Balane</title>
 </svelte:head>
 
-<UpcomingEventsList events={upcomingEvents} />
+<div class="mb-20 sm:mb-40">
+  <UpcomingEvents events={upcomingEvents} />
 
-<h4 class="mt-12 sm:mt-24 mb-8 text-base sm:text-lg font-black">Past events</h4>
-<PastEventsList events={pastEvents} />
+  <h4 class="mt-12 sm:mt-24 mb-8 text-base sm:text-lg font-black">Past events</h4>
+  <PastEvents events={pastEvents} />
+</div>

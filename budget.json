@@ -7,7 +7,7 @@
       },
       {
         "resourceType": "script",
-        "budget": 120
+        "budget": 110
       },
       {
         "resourceType": "image",
@@ -23,7 +23,7 @@
       },
       {
         "resourceType": "font",
-        "budget": 50
+        "budget": 60
       },
       {
         "resourceType": "total",
