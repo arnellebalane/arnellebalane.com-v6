@@ -7,7 +7,7 @@
 </script>
 
 <script>
-  import ArticlesList from '@components/ArticlesList.svelte';
+  import Articles from '@components/Articles.svelte';
 
   export let articles = [];
 </script>
@@ -16,4 +16,4 @@
   <title>Blog | Arnelle Balane</title>
 </svelte:head>
 
-<ArticlesList {articles} />
+<Articles {articles} />

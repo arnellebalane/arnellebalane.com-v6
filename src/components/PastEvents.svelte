@@ -1,5 +1,5 @@
 <script>
-  import PastEventsListItem from './PastEventsListItem.svelte';
+  import PastEventsItem from './PastEventsItem.svelte';
 
   export let events = [];
 </script>
@@ -14,6 +14,6 @@
 
 <section>
   {#each events as event}
-    <PastEventsListItem {event} />
+    <PastEventsItem {event} />
   {/each}
 </section>
