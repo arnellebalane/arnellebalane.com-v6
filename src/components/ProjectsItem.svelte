@@ -6,9 +6,9 @@
   <a href={project.repo} target="_blank" rel="noopener noreferrer" class="mb-2">
     <h1 class="text-xl font-black">{project.name}</h1>
   </a>
-  <p class="text-base mb-6">{project.description}</p>
+  <p class="mb-auto text-base">{project.description}</p>
 
-  <ul class="flex flex-wrap -mx-3 mt-auto">
+  <ul class="flex flex-wrap -mx-3 mt-10">
     {#each project.tags as tag}
       <li class="mx-3 font-mono text-xs text-gray-700">{tag}</li>
     {/each}
