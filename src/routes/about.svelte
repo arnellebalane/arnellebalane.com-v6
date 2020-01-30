@@ -1,3 +1,17 @@
+<script context="module">
+  export async function preload() {
+    const experiences = await this.fetch('api/work-experiences.json').then(response => response.json());
+
+    return { experiences };
+  }
+</script>
+
+<script>
+  import WorkExperiences from '@components/WorkExperiences.svelte';
+
+  export let experiences = [];
+</script>
+
 <svelte:head>
   <title>About | Arnelle Balane</title>
 </svelte:head>
@@ -21,6 +35,12 @@
   </div>
 
   <img src="avatar.jpg" alt="Arnelle Balane" class="hidden sm:block w-1/4 lg:w-1/3 mt-10 ml-10 rounded" />
+</div>
+
+<div class="mb-32">
+  <h2 class="mb-6 text-xl sm:text-2xl font-black">Experience</h2>
+
+  <WorkExperiences {experiences} />
 </div>
 
 <div class="max-w-xl mb-32">
