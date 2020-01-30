@@ -8,7 +8,7 @@
 
     <p class="mb-6">
       Hello! I’m Arnelle, a software developer based in Cebu, Philippines. I enjoy building things using good old HTML,
-      CSS, JavaScript, and Web Platform APIs. I develop performant Web applications that provide good user experiences.
+      CSS, JavaScript, and Web Platform APIs.
     </p>
     <p class="mb-6">
       I'm a Google Developers Expert in Web Technologies, and an active volunteer and speaker for local tech
