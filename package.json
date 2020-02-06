@@ -41,6 +41,7 @@
     "prettier-plugin-svelte": "0.7.0",
     "purgecss-from-svelte": "2.0.2",
     "sapper": "^0.27.0",
+    "shell-quote": "1.7.2",
     "svelte": "^3.0.0",
     "svelte-loader": "^2.9.0",
     "webpack": "^4.7.0"
