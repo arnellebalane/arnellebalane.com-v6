@@ -1,3 +1,5 @@
+import pick from 'lodash/pick';
+import _get from 'lodash/get';
 import contentful from '../_lib/contentful';
 
 export async function get(req, res) {
@@ -5,20 +7,11 @@ export async function get(req, res) {
     order: '-sys.createdAt',
     content_type: 'event'
   });
-  const data = entries.items.map(({ fields }) => {
-    const entry = {
-      name: fields.name,
-      session: fields.session,
-      url: fields.url,
-      type: fields.type,
-      location: fields.location,
-      date: fields.date
-    };
-    if (fields.image) {
-      entry.image = fields.image.fields.file.url;
-    }
-    return entry;
-  });
+
+  const data = entries.items.map(({ fields }) => ({
+    ...pick(fields, ['name', 'session', 'url', 'type', 'location', 'date']),
+    image: _get(fields, 'image.fields.file.url')
+  }));
 
   res.setHeader('Content-Type', 'application/json');
   res.end(JSON.stringify(data));

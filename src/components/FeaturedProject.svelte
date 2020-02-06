@@ -33,8 +33,8 @@
     </picture>
 
     <div class="text-center -mt-4">
-      {#if project.repo}
-        <FeaturedProjectLink href={project.repo}>Repo</FeaturedProjectLink>
+      {#if project.repository}
+        <FeaturedProjectLink href={project.repository}>Repo</FeaturedProjectLink>
       {/if}
       {#if project.url}
         <FeaturedProjectLink href={project.url}>Visit Site</FeaturedProjectLink>

@@ -1,3 +1,4 @@
+import pick from 'lodash';
 import contentful from '../_lib/contentful';
 
 export async function get(req, res) {
@@ -5,14 +6,10 @@ export async function get(req, res) {
     order: '-fields.startDate',
     content_type: 'workExperience'
   });
-  const data = entries.items.map(({ fields }) => ({
-    company: fields.company,
-    position: fields.position,
-    startDate: fields.startDate,
-    endDate: fields.endDate,
-    isCurrent: fields.isCurrent,
-    description: fields.description
-  }));
+
+  const data = entries.items.map(({ fields }) =>
+    pick(fields, ['company', 'position', 'startDate', 'endDate', 'isCurrent', 'description'])
+  );
 
   res.setHeader('Content-Type', 'application/json');
   res.end(JSON.stringify(data));

@@ -3,7 +3,7 @@
 </script>
 
 <div class="flex flex-col px-6 py-5 bg-gray-100 rounded">
-  <a href={project.repo} target="_blank" rel="noopener noreferrer" class="mb-2">
+  <a href={project.repository} target="_blank" rel="noopener noreferrer" class="mb-2">
     <h1 class="text-xl font-black">{project.name}</h1>
   </a>
   <p class="mb-auto text-base">{project.description}</p>

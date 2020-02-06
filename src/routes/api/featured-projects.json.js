@@ -1,3 +1,4 @@
+import pick from 'lodash/pick';
 import contentful from '../_lib/contentful';
 
 export async function get(req, res) {
@@ -6,12 +7,9 @@ export async function get(req, res) {
     content_type: 'project',
     'fields.is_featured': true
   });
+
   const data = entries.items.map(({ fields }) => ({
-    name: fields.name,
-    description: fields.description,
-    url: fields.url,
-    repo: fields.repository,
-    tags: fields.tags,
+    ...pick(fields, ['name', 'description', 'url', 'repository', 'tags']),
     image: `${fields.image.fields.file.url}?fm=webp&q=80`
   }));
 
