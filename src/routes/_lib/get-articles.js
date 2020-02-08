@@ -25,7 +25,8 @@ export default async function getArticles() {
           meta: {
             ...pick(extracted.attributes, ['title', 'description', 'date', 'categories', 'image']),
             date: dayjs(extracted.attributes.date).format('YYYY-MM-DD'),
-            url: `/blog/${slug}`
+            url: `/blog/${slug}`,
+            slug
           },
           html: marked(extracted.body)
         };
