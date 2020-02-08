@@ -1,5 +1,5 @@
 import pick from 'lodash';
-import contentful from '../_lib/contentful';
+import contentful from '@lib/contentful';
 
 export async function get(req, res) {
   const entries = await contentful.getEntries({
