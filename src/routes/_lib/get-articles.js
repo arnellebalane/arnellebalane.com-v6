@@ -3,6 +3,7 @@ import { promises as fs } from 'fs';
 import pick from 'lodash/pick';
 import frontmatter from 'front-matter';
 import marked from 'marked';
+import dayjs from 'dayjs';
 
 // process.cwd() will _usually_ point to the project's root directory.
 // TODO: This seems very fragile though, hoping to improve this soon.
@@ -23,6 +24,7 @@ export default async function getArticles() {
         const article = {
           meta: {
             ...pick(extracted.attributes, ['title', 'description', 'date', 'categories', 'image']),
+            date: dayjs(extracted.attributes.date).format('YYYY-MM-DD'),
             url: `/blog/${slug}`
           },
           html: marked(extracted.body)

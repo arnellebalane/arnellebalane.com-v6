@@ -1,17 +1,29 @@
 import pick from 'lodash/pick';
 import _get from 'lodash/get';
-import contentful from '../_lib/contentful';
+import sortBy from 'lodash/sortBy';
+import contentful from '@lib/contentful';
+import getArticles from '@lib/get-articles';
 
 export async function get(req, res) {
-  const entries = await contentful.getEntries({
-    order: '-fields.date',
-    content_type: 'article'
-  });
+  const [remoteEntries, localEntries] = await Promise.all([
+    contentful.getEntries({
+      order: '-fields.date',
+      content_type: 'article'
+    }),
+    getArticles()
+  ]);
 
-  const data = entries.items.map(({ fields }) => ({
-    ...pick(fields, ['title', 'description', 'date', 'url', 'source', 'categories']),
-    cover_image: _get(fields, 'cover_image.fields.file.url')
-  }));
+  let data = [].concat(
+    remoteEntries.items.map(({ fields }) => ({
+      ...pick(fields, ['title', 'description', 'date', 'url', 'source', 'categories']),
+      cover_image: _get(fields, 'cover_image.fields.file.url')
+    })),
+    localEntries.map(entry => entry.meta)
+  );
+
+  // Lodash's sortBy always sorts in ascending order, so we take the negative
+  // value of the date so that the latest article comes first.
+  data = sortBy(data, entry => -new Date(entry.date).valueOf());
 
   res.setHeader('Content-Type', 'application/json');
   res.end(JSON.stringify(data));
