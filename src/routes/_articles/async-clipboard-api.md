@@ -4,6 +4,7 @@ title: 'Async Clipboard API: Accessing the clipboard using JavaScript'
 description: This article shows how to use the Async Clipboard API to access the system
   clipboard very easily.
 image: /articles/async-clipboard-api/async-clipboard-api.jpg?cloudinary=w_1200,f_auto
+cover_image: /articles/async-clipboard-api/async-clipboard-api.jpg?cloudinary=w_1200,f_auto
 categories:
   - javascript
   - web-development

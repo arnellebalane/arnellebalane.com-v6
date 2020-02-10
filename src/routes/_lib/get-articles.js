@@ -23,7 +23,7 @@ export default async function getArticles() {
         const extracted = frontmatter(fileContent);
         const article = {
           meta: {
-            ...pick(extracted.attributes, ['title', 'description', 'date', 'categories', 'image']),
+            ...pick(extracted.attributes, ['title', 'description', 'date', 'categories', 'cover_image']),
             date: dayjs(extracted.attributes.date).format('YYYY-MM-DD'),
             url: `/blog/${slug}`,
             slug
