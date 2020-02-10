@@ -3,7 +3,7 @@ layout: layouts/article.njk
 title: 'Async Clipboard API: Accessing the clipboard using JavaScript'
 description: This article shows how to use the Async Clipboard API to access the system
   clipboard very easily.
-image: assets/async-clipboard-api.jpg?cloudinary=w_1200,f_auto
+image: /articles/async-clipboard-api/async-clipboard-api.jpg?cloudinary=w_1200,f_auto
 categories:
   - javascript
   - web-development
@@ -90,10 +90,10 @@ or not:
 
 <img
     srcset="
-        assets/clipboard-permission-prompt.jpg?cloudinary=w_360,f_auto 360w,
-        assets/clipboard-permission-prompt.jpg?cloudinary=w_580,f_auto 580w,
-        assets/clipboard-permission-prompt.jpg?cloudinary=w_800,f_auto 800w"
-    src="assets/clipboard-permission-prompt.jpg?cloudinary=w_800,f_auto"
+        /articles/async-clipboard-api/clipboard-permission-prompt.jpg?cloudinary=w_360,f_auto 360w,
+        /articles/async-clipboard-api/clipboard-permission-prompt.jpg?cloudinary=w_580,f_auto 580w,
+        /articles/async-clipboard-api/clipboard-permission-prompt.jpg?cloudinary=w_800,f_auto 800w"
+    src="/articles/async-clipboard-api/clipboard-permission-prompt.jpg?cloudinary=w_800,f_auto"
     alt="Clipboard access permission prompt in Chrome"
     loading="lazy">
 
