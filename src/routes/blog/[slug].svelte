@@ -19,8 +19,8 @@
   }
 </style>
 
-<div class="mx-auto">
-  <h1 class="mb-8 sm:mb-16 text-3xl sm:text-4xl font-black">{article.meta.title}</h1>
+<div class="article mx-auto">
+  <h1 class="mb-8 sm:mb-16 text-3xl sm:text-4xl font-black leading-normal">{article.meta.title}</h1>
 
   {@html article.html}
 </div>

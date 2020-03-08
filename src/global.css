@@ -5,3 +5,98 @@
 :root {
   --primary-color: #c13355;
 }
+
+.article {
+  @apply leading-relaxed;
+}
+
+.article h2,
+.article h3 {
+  @apply mt-16;
+  @apply mb-6;
+  @apply font-black;
+}
+
+.article h2 {
+  @apply text-3xl;
+}
+
+.article h3 {
+  @apply text-2xl;
+}
+
+.article a {
+  @apply text-primary;
+}
+
+.article p {
+  @apply my-6;
+}
+
+.article img {
+  @apply block;
+  @apply w-full;
+  @apply mb-12;
+  @apply rounded;
+}
+
+.article code {
+  @apply py-1;
+  @apply px-2;
+  @apply rounded;
+  @apply font-mono;
+  @apply text-base;
+  @apply bg-gray-200;
+}
+
+.article a code {
+  @apply underline;
+}
+
+.article pre {
+  @apply p-8;
+  @apply my-8;
+  @apply rounded;
+  @apply bg-gray-200;
+  @apply leading-tight;
+  @apply overflow-auto;
+}
+
+.article pre code {
+  @apply p-0;
+  @apply bg-transparent;
+}
+
+.article hr {
+  @apply w-full;
+  @apply max-w-md;
+  @apply h-1;
+  @apply border-none;
+  @apply rounded;
+  @apply my-24;
+  @apply mx-auto;
+  @apply bg-gray-200;
+}
+
+.article blockquote {
+  @apply py-0;
+  @apply px-8;
+  @apply border-l-4;
+  @apply border-solid;
+  @apply border-primary;
+  @apply rounded;
+  @apply my-4;
+  @apply italic;
+  @apply bg-gray-100;
+  @apply overflow-hidden;
+}
+
+.article ul {
+  @apply mb-16;
+}
+
+.article li {
+  @apply my-4;
+  @apply list-disc;
+  @apply list-inside;
+}
