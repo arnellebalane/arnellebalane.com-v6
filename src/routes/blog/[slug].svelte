@@ -10,31 +10,39 @@
 </script>
 
 <script>
+  import { onMount } from 'svelte';
   import dayjs from 'dayjs';
 
   export let article;
 
-  const postedOn = dayjs(article.meta.date).format('MMMM DD, YYYY');
-  const url = location.origin + location.pathname;
+  let postedOn;
+  let url;
+  let shareLabel;
+  let shareHandler;
 
-  function tweetArticle() {
-    const tweetText = `"${document.title}" by @arnellebalane: ${url}`;
-    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
-    window.open(tweetUrl, 'new-tweet');
-  }
+  onMount(() => {
+    postedOn = dayjs(article.meta.date).format('MMMM DD, YYYY');
+    url = location.origin + location.pathname;
 
-  function shareArticle() {
-    const UNSUPPORTED_WEB_SHARE_ERROR = 'Internal error: could not connect to Web Share interface.';
+    function tweetArticle() {
+      const tweetText = `"${document.title}" by @arnellebalane: ${url}`;
+      const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
+      window.open(tweetUrl, 'new-tweet');
+    }
 
-    navigator.share({ text: document.title, title: document.title, url }).catch(error => {
-      if (error.message === UNSUPPORTED_WEB_SHARE_ERROR) {
-        tweetArticle();
-      }
-    });
-  }
+    function shareArticle() {
+      const UNSUPPORTED_WEB_SHARE_ERROR = 'Internal error: could not connect to Web Share interface.';
 
-  const shareLabel = navigator.share ? 'Share this article' : 'Tweet this article';
-  const shareHandler = navigator.share ? shareArticle : tweetArticle;
+      navigator.share({ text: document.title, title: document.title, url }).catch(error => {
+        if (error.message === UNSUPPORTED_WEB_SHARE_ERROR) {
+          tweetArticle();
+        }
+      });
+    }
+
+    shareLabel = navigator.share ? 'Share this article' : 'Tweet this article';
+    shareHandler = navigator.share ? shareArticle : tweetArticle;
+  });
 </script>
 
 <style>
