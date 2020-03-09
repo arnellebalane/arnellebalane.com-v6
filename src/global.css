@@ -35,9 +35,16 @@
 
 .article img {
   @apply block;
-  @apply w-full;
+  @apply -mx-5;
   @apply mb-12;
-  @apply rounded;
+  @apply border-4;
+  @apply border-solid;
+  @apply border-gray-100;
+
+  width: calc(100% + 2.5rem);
+
+  /* @apply max-w-none currently doesn't work, saying that it can't be found */
+  max-width: none;
 }
 
 .article code {
@@ -56,7 +63,7 @@
 .article pre {
   @apply p-8;
   @apply my-8;
-  @apply rounded;
+  @apply -mx-5;
   @apply bg-gray-200;
   @apply leading-tight;
   @apply overflow-auto;
@@ -101,4 +108,16 @@
   @apply my-4;
   @apply list-disc;
   @apply list-inside;
+}
+
+@screen md {
+  .article img {
+    @apply -mx-8;
+    @apply rounded;
+  }
+
+  .article pre {
+    @apply -mx-8;
+    @apply rounded;
+  }
 }
