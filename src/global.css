@@ -86,6 +86,7 @@
   @apply border-primary;
   @apply rounded;
   @apply my-4;
+  @apply mx-0;
   @apply italic;
   @apply bg-gray-100;
   @apply overflow-hidden;

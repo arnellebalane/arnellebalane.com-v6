@@ -14,7 +14,12 @@ module.exports = {
             extractor: PurgeSvelte,
             extensions: ['svelte']
           }
-        ]
+        ],
+        // Since the article contents are fetched from the articles data,
+        // PurgeCSS doesn't know beforehand which selectors are available and
+        // might unexpectecly remove some used selectors. So we whitelist all
+        // styles for the article detail page.
+        whitelistPatternsChildren: [/article/]
       })
   ]
 };
