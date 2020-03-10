@@ -4,6 +4,7 @@ import pick from 'lodash/pick';
 import frontmatter from 'front-matter';
 import marked from 'marked';
 import dayjs from 'dayjs';
+import optimizeHtmlImages from './optimize-html-images';
 
 // process.cwd() will _usually_ point to the project's root directory.
 // TODO: This seems very fragile though, hoping to improve this soon.
@@ -28,7 +29,7 @@ export default async function getArticles() {
             url: `/blog/${slug}`,
             slug
           },
-          html: marked(extracted.body)
+          html: optimizeHtmlImages(marked(extracted.body))
         };
         return article;
       })
