@@ -4,7 +4,7 @@ if (CLOUDINARY_BASE_URL) {
   CLOUDINARY_BASE_URL = CLOUDINARY_BASE_URL.replace(/\/$/, '/');
 }
 
-export default function getOptimizedImage(url) {
+export default function getOptimizedImage(url, transforms) {
   if (!url) {
     return null;
   }
@@ -17,5 +17,5 @@ export default function getOptimizedImage(url) {
     url = `https:${url}`; /* eslint-disable-line no-param-reassign */
   }
 
-  return `${CLOUDINARY_BASE_URL}image/fetch/${url}`;
+  return [CLOUDINARY_BASE_URL, 'image/fetch', transforms, url].filter(Boolean).join('/');
 }

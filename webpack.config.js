@@ -1,3 +1,4 @@
+require('dotenv').config();
 const webpack = require('webpack');
 const path = require('path');
 const config = require('sapper/config/webpack.js');
@@ -54,7 +55,10 @@ module.exports = {
       // dev && new webpack.HotModuleReplacementPlugin(),
       new webpack.DefinePlugin({
         'process.browser': true,
-        'process.env.NODE_ENV': JSON.stringify(mode)
+        'process.env': JSON.stringify({
+          NODE_ENV: mode,
+          CLOUDINARY_BASE_URL: process.env.CLOUDINARY_BASE_URL
+        })
       }),
       new MiniCssExtractPlugin({
         filename: '[hash]/[name].css'
