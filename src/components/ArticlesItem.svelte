@@ -1,5 +1,6 @@
 <script>
   import dayjs from 'dayjs';
+  import getOptimizedImage from '@lib/get-optimized-image';
 
   export let article;
 
@@ -31,9 +32,9 @@
   <div class="cover-image hidden sm:block order-1 relative w-1/2 lg:w-1/3 max-w-sm ml-6">
     {#if article.cover_image}
       <picture>
-        <source srcset={`${article.cover_image}?w=350&fm=webp&q=85`} type="image/webp" />
+        <source srcset={getOptimizedImage(article.cover_image)} type="image/webp" />
         <img
-          src={`${article.cover_image}?w=350&fm=jpg&fl=progressive&q=80`}
+          src={getOptimizedImage(article.cover_image)}
           alt={article.title}
           loading="lazy"
           class="absolute inset-0 w-full h-full object-cover object-center rounded shadow-2xl"
