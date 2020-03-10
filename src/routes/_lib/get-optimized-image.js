@@ -1,7 +1,7 @@
 let { CLOUDINARY_BASE_URL } = process.env;
 
 if (CLOUDINARY_BASE_URL) {
-  CLOUDINARY_BASE_URL = CLOUDINARY_BASE_URL.replace(/\/$/, '/');
+  CLOUDINARY_BASE_URL = CLOUDINARY_BASE_URL.replace(/\/$/, '');
 }
 
 export default function getOptimizedImage(url, transforms) {

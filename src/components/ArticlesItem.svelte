@@ -32,9 +32,9 @@
   <div class="cover-image hidden sm:block order-1 relative w-1/2 lg:w-1/3 max-w-sm ml-6">
     {#if article.cover_image}
       <picture>
-        <source srcset={getOptimizedImage(article.cover_image)} type="image/webp" />
+        <source srcset={getOptimizedImage(article.cover_image, 'w_350,f_webp,q_85')} type="image/webp" />
         <img
-          src={getOptimizedImage(article.cover_image)}
+          src={getOptimizedImage(article.cover_image, 'w_350,f_webp,q_85')}
           alt={article.title}
           loading="lazy"
           class="absolute inset-0 w-full h-full object-cover object-center rounded shadow-2xl"
