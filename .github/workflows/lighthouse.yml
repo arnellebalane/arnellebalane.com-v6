@@ -23,6 +23,7 @@ jobs:
             https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/events/
             https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/projects/
             https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/about/
+            https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/blog/async-clipboard-api/
           budgetPath: ./budget.json
           upload.serverBaseUrl: ${{ secrets.LHCI_SERVER }}
           upload.token: ${{ secrets.LHCI_TOKEN }}
@@ -38,6 +39,7 @@ jobs:
             https://arnellebalane-v6.netlify.com/events/
             https://arnellebalane-v6.netlify.com/projects/
             https://arnellebalane-v6.netlify.com/about/
+            https://arnellebalane-v6.netlify.com/blog/async-clipboard-api/
           budgetPath: ./budget.json
           upload.serverBaseUrl: ${{ secrets.LHCI_SERVER }}
           upload.token: ${{ secrets.LHCI_TOKEN }}
