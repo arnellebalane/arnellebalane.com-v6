@@ -24,9 +24,9 @@
 
   <div class="max-w-sm sm:max-w-full sm:w-1/2 sm:px-5 xl:px-10 mx-auto mt-8 sm:m-0">
     <picture>
-      <source srcset={getOptimizedImage(project.image, 'f_webp,q=85')} type="image/webp" />
+      <source srcset={getOptimizedImage(project.image, 'f_webp,q_85')} type="image/webp" />
       <img
-        src={getOptimizedImage(project.image, 'f_jpg,fl_progressive,q=85')}
+        src={getOptimizedImage(project.image, 'f_jpg,fl_progressive,q_85')}
         alt={project.name}
         loading="lazy"
         class="border-4 border-solid border-gray-100 rounded"
