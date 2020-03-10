@@ -10,7 +10,7 @@ export async function get(req, res) {
 
   const data = entries.items.map(({ fields }) => ({
     ...pick(fields, ['name', 'description', 'url', 'repository', 'tags']),
-    image: `${fields.image.fields.file.url}?fm=webp&q=80`
+    image: fields.image.fields.file.url
   }));
 
   res.setHeader('Content-Type', 'application/json');

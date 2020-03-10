@@ -1,6 +1,10 @@
+<script>
+  import getOptimizedImage from '@lib/get-optimized-image';
+</script>
+
 <section class="flex flex-col-reverse sm:flex-row mb-24 sm:mb-56">
   <img
-    src="avatar.jpg"
+    src={getOptimizedImage('arnelle-avatar.jpg', 'w_256,q_80')}
     alt="Arnelle Balane"
     class="w-32 md:w-64 h-40 md:h-80 mx-auto sm:mx-0 sm:mr-5 md:mr-8 rounded-lg object-cover object-center"
   />

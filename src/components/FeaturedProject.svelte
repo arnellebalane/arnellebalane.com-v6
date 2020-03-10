@@ -1,5 +1,6 @@
 <script>
   import FeaturedProjectLink from './FeaturedProjectLink.svelte';
+  import getOptimizedImage from '../routes/_lib/get-optimized-image';
 
   export let project;
   export let layout = 'left';
@@ -23,9 +24,9 @@
 
   <div class="max-w-sm sm:max-w-full sm:w-1/2 sm:px-5 xl:px-10 mx-auto mt-8 sm:m-0">
     <picture>
-      <source srcset={`${project.image}?fm=webp&q=85`} type="image/webp" />
+      <source srcset={getOptimizedImage(project.image, 'f_webp,q=85')} type="image/webp" />
       <img
-        src={`${project.image}?fm=jpg&fl=progressive&q=85`}
+        src={getOptimizedImage(project.image, 'f_jpg,fl_progressive,q=85')}
         alt={project.name}
         loading="lazy"
         class="border-4 border-solid border-gray-100 rounded"

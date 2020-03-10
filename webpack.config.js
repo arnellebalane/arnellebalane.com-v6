@@ -57,6 +57,7 @@ module.exports = {
         'process.browser': true,
         'process.env': JSON.stringify({
           NODE_ENV: mode,
+          BASE_URL: process.env.BASE_URL,
           CLOUDINARY_BASE_URL: process.env.CLOUDINARY_BASE_URL
         })
       }),

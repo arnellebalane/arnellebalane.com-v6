@@ -9,6 +9,7 @@
 
 <script>
   import WorkExperiences from '@components/WorkExperiences.svelte';
+  import getOptimizedImage from '@lib/get-optimized-image';
 
   export let experiences = [];
 </script>
@@ -35,7 +36,11 @@
     </p>
   </div>
 
-  <img src="speaking.jpg" alt="Arnelle Balane" class="hidden sm:block w-1/4 lg:w-1/3 mt-10 lg:mt-5 ml-10 rounded-lg" />
+  <img
+    src={getOptimizedImage('speaking.jpg', 'w_350,q_85')}
+    alt="Arnelle Balane"
+    class="hidden sm:block w-1/4 lg:w-1/3 mt-10 lg:mt-5 ml-10 rounded-lg"
+  />
 </div>
 
 <div class="mb-32">
@@ -48,7 +53,11 @@
   <h2 id="biography" class="mb-6 text-xl sm:text-2xl font-black">Biography</h2>
 
   <div class="flex flex-col-reverse sm:flex-row items-center sm:items-start">
-    <img src="avatar.jpg" alt="Arnelle Balane" class="w-1/2 sm:w-1/3 lg:w-48 mr-5 md:mr-10 rounded-lg" />
+    <img
+      src={getOptimizedImage('arnelle-avatar.jpg', 'w_300,q_85')}
+      alt="Arnelle Balane"
+      class="w-1/2 sm:w-1/3 lg:w-48 mr-5 md:mr-10 rounded-lg"
+    />
 
     <p class="max-w-xl mb-5">
       Arnelle is a Web developer from Cebu, Philippines and a Google Developers Expert for Web Technologies who enjoys
