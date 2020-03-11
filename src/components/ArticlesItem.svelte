@@ -34,7 +34,7 @@
       <picture>
         <source srcset={getOptimizedImage(article.cover_image, 'w_350,f_webp,q_85')} type="image/webp" />
         <img
-          src={getOptimizedImage(article.cover_image, 'w_350,f_webp,q_85')}
+          src={getOptimizedImage(article.cover_image, 'w_350,q_85')}
           alt={article.title}
           loading="lazy"
           class="absolute inset-0 w-full h-full object-cover object-center rounded shadow-2xl"
