@@ -64,7 +64,6 @@
   @apply p-8;
   @apply my-8;
   @apply -mx-5;
-  @apply bg-gray-200;
   @apply leading-tight;
   @apply overflow-auto;
 }

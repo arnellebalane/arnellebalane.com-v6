@@ -3,8 +3,19 @@ import { promises as fs } from 'fs';
 import pick from 'lodash/pick';
 import frontmatter from 'front-matter';
 import marked from 'marked';
+import prism from 'prismjs';
 import dayjs from 'dayjs';
 import optimizeHtmlImages from './optimize-html-images';
+
+marked.setOptions({
+  highlight(code, lang) {
+    try {
+      return prism.highlight(code, prism.languages[lang], lang);
+    } catch (error) {
+      return code;
+    }
+  }
+});
 
 // process.cwd() will _usually_ point to the project's root directory.
 // TODO: This seems very fragile though, hoping to improve this soon.

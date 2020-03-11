@@ -53,6 +53,7 @@
 
 <svelte:head>
   <title>{article.meta.title}</title>
+  <link rel="stylesheet" href="code.css" />
 </svelte:head>
 
 <div class="article mx-auto">
