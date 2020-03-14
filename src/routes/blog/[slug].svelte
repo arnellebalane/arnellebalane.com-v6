@@ -12,8 +12,12 @@
 <script>
   import { onMount } from 'svelte';
   import dayjs from 'dayjs';
+  import getOptimizedImage from '@lib/get-optimized-image';
 
   export let article;
+
+  const articleUrl = `https://arnellebalane.com${article.meta.url}`;
+  const articleImage = getOptimizedImage(article.meta.image);
 
   let postedOn;
   let url;
@@ -53,6 +57,11 @@
 
 <svelte:head>
   <title>{article.meta.title}</title>
+  <meta name="og:title" content={article.meta.title} />
+  <meta name="og:description" content={article.meta.description} />
+  <meta name="og:url" content={articleUrl} />
+  <meta name="og:image" content={articleImage} />
+
   <link rel="stylesheet" href="code.css" />
 </svelte:head>
 
