@@ -142,7 +142,7 @@ These events only fire when the action was performed on the page, and not when
 performed in other pages or apps.
 
 The clipboard `event` objects have a `clipboardData` property which is a
-[DataTransfer](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer)
+[`DataTransfer`](https://developer.mozilla.org/en-US/docs/Web/API/DataTransfer)
 object. This allows us to overwrite the data that will be written to the
 clipboard, giving us the opportunity to write data in other formats, such as
 `text/html`:

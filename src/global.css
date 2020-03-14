@@ -27,6 +27,16 @@
 
 .article a {
   @apply text-primary;
+  @apply font-bold;
+
+  --underline-color: rgba(193, 51, 85, 0.2);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 70%,
+    var(--underline-color) 70%,
+    var(--underline-color) 100%
+  );
 }
 
 .article p {
