@@ -17,7 +17,7 @@
   export let article;
 
   const articleUrl = `https://arnellebalane.com${article.meta.url}`;
-  const articleImage = getOptimizedImage(article.meta.image);
+  const articleImage = getOptimizedImage(article.meta.cover_image);
 
   let postedOn;
   let url;
