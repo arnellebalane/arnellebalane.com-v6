@@ -39,6 +39,8 @@
   <img
     src={getOptimizedImage('speaking.jpg', 'w_350,q_85')}
     alt="Arnelle Balane"
+    width="350"
+    height="386"
     class="hidden sm:block w-1/4 lg:w-1/3 mt-10 lg:mt-5 ml-10 rounded-lg"
   />
 </div>
@@ -56,6 +58,8 @@
     <img
       src={getOptimizedImage('arnelle-avatar.jpg', 'w_300,q_85')}
       alt="Arnelle Balane"
+      width="192"
+      height="192"
       class="w-1/2 sm:w-1/3 lg:w-48 mr-5 md:mr-10 rounded-lg"
     />
 

@@ -28,6 +28,8 @@
       <img
         src={getOptimizedImage(project.image, 'f_jpg,fl_progressive,q_85')}
         alt={project.name}
+        width="396"
+        height="266"
         loading="lazy"
         class="border-4 border-solid border-gray-100 rounded"
       />

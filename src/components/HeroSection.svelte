@@ -6,6 +6,8 @@
   <img
     src={getOptimizedImage('arnelle-avatar.jpg', 'w_256,q_80')}
     alt="Arnelle Balane"
+    width="256"
+    height="320"
     class="w-32 md:w-64 h-40 md:h-80 mx-auto sm:mx-0 sm:mr-5 md:mr-8 rounded-lg object-cover object-center"
   />
 

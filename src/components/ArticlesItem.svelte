@@ -36,6 +36,8 @@
         <img
           src={getOptimizedImage(article.cover_image, 'w_350,q_85')}
           alt={article.title}
+          width="350"
+          height="196"
           loading="lazy"
           class="absolute inset-0 w-full h-full object-cover object-center rounded shadow-2xl"
         />
