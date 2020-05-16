@@ -1,14 +1,15 @@
 <script>
-  import getOptimizedImage from '@lib/get-optimized-image';
+  import Image from './Image.svelte';
 </script>
 
 <section class="flex flex-col-reverse sm:flex-row mb-24 sm:mb-56">
-  <img
-    src={getOptimizedImage('arnelle-avatar.jpg', 'w_256,q_80')}
+  <Image
+    src="arnelle-avatar.jpg"
     alt="Arnelle Balane"
-    width="256"
+    width={256}
     height="320"
-    class="w-32 md:w-64 h-40 md:h-80 mx-auto sm:mx-0 sm:mr-5 md:mr-8 rounded-lg object-cover object-center"
+    wrapperClass="w-32 md:w-64 h-40 md:h-80 mx-auto sm:mx-0 sm:mr-5 md:mr-8"
+    imageClass="rounded-lg"
   />
 
   <div class="max-w-lg my-4">

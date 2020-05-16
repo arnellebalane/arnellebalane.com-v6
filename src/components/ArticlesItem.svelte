@@ -1,6 +1,6 @@
 <script>
   import dayjs from 'dayjs';
-  import getOptimizedImage from '@lib/get-optimized-image';
+  import Image from './Image.svelte';
 
   export let article;
 
@@ -20,30 +20,18 @@
   }
 </script>
 
-<style>
-  .cover-image::before {
-    content: '';
-    display: block;
-    padding-top: calc(100% / 16 * 9);
-  }
-</style>
-
 <article class="flex items-start py-10 mb-12">
-  <div class="cover-image hidden sm:block order-1 relative w-1/2 lg:w-1/3 max-w-sm ml-6">
-    {#if article.cover_image}
-      <picture>
-        <source srcset={getOptimizedImage(article.cover_image, 'w_350,f_webp,q_85')} type="image/webp" />
-        <img
-          src={getOptimizedImage(article.cover_image, 'w_350,q_85')}
-          alt={article.title}
-          width="350"
-          height="196"
-          loading="lazy"
-          class="absolute inset-0 w-full h-full object-cover object-center rounded shadow-2xl"
-        />
-      </picture>
-    {/if}
-  </div>
+  {#if article.cover_image}
+    <Image
+      src={article.cover_image}
+      alt={article.title}
+      width={350}
+      height={156}
+      aspectRatio="100% / 16 * 9"
+      wrapperClass="hidden sm:block order-1 w-1/2 lg:w-1/3 max-w-sm ml-6"
+      imageClass="rounded shadow-2xl"
+    />
+  {/if}
 
   <div class="max-w-2xl">
     <header class="mb-4 sm:mb-8">

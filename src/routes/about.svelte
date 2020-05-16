@@ -9,7 +9,7 @@
 
 <script>
   import WorkExperiences from '@components/WorkExperiences.svelte';
-  import getOptimizedImage from '@lib/get-optimized-image';
+  import Image from '@components/Image.svelte';
 
   export let experiences = [];
 </script>
@@ -36,12 +36,13 @@
     </p>
   </div>
 
-  <img
-    src={getOptimizedImage('speaking.jpg', 'w_350,q_85')}
+  <Image
+    src="speaking.jpg"
     alt="Arnelle Balane"
-    width="350"
-    height="386"
-    class="hidden sm:block w-1/4 lg:w-1/3 mt-10 lg:mt-5 ml-10 rounded-lg"
+    width={350}
+    height={386}
+    wrapperClass="hidden sm:block w-1/4 lg:w-1/3 mt-10 lg:mt-5 ml-10"
+    imageClass="rounded-lg"
   />
 </div>
 
@@ -55,12 +56,13 @@
   <h2 id="biography" class="mb-6 text-xl sm:text-2xl font-black">Biography</h2>
 
   <div class="flex flex-col-reverse sm:flex-row items-center sm:items-start">
-    <img
-      src={getOptimizedImage('arnelle-avatar.jpg', 'w_300,q_85')}
+    <Image
+      src="arnelle-avatar.jpg"
       alt="Arnelle Balane"
-      width="192"
-      height="192"
-      class="w-1/2 sm:w-1/3 lg:w-48 mr-5 md:mr-10 rounded-lg"
+      width={192}
+      height={192}
+      wrapperClass="w-1/2 sm:w-1/3 lg:w-48 mr-5 md:mr-10"
+      imageClass="rounded-lg"
     />
 
     <p class="max-w-xl mb-5">
