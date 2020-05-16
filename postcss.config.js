@@ -1,4 +1,4 @@
-const PurgeSvelte = require('purgecss-from-svelte');
+const PurgeFromSvelte = require('./lib/purge-from-svelte');
 
 const prod = process.env.NODE_ENV === 'production';
 
@@ -11,7 +11,7 @@ module.exports = {
         defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
         extractors: [
           {
-            extractor: PurgeSvelte,
+            extractor: PurgeFromSvelte,
             extensions: ['svelte']
           }
         ],
