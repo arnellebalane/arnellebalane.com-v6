@@ -31,6 +31,14 @@
        lazily loaded when it precaches secondary pages -->
     %sapper.styles%
 
+    <!-- NOTE: Manually inlining critical CSS for now, as integrating with
+       other tools seems difficult to do. -->
+    <style>
+      main {
+        max-width: 68rem;
+      }
+    </style>
+
     <!-- This contains the contents of the <svelte:head> component, if
        the current page has one -->
     %sapper.head%
