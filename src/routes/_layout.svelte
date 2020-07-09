@@ -1,8 +1,14 @@
 <script>
+  import { onMount } from 'svelte';
   import Nav from '@components/Nav.svelte';
   import Footer from '@components/Footer.svelte';
 
   export let segment;
+
+  onMount(() => {
+    /* eslint-disable-next-line global-require */
+    require('quicklink').listen();
+  });
 </script>
 
 <style>
