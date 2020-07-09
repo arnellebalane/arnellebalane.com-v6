@@ -57,10 +57,11 @@
 
 <svelte:head>
   <title>{article.meta.title}</title>
-  <meta name="og:title" content={article.meta.title} />
-  <meta name="og:description" content={article.meta.description} />
-  <meta name="og:url" content={articleUrl} />
-  <meta name="og:image" content={articleImage} />
+  <meta name="description" content={article.meta.description} />
+  <meta property="og:title" content={article.meta.title} />
+  <meta property="og:description" content={article.meta.description} />
+  <meta property="og:url" content={articleUrl} />
+  <meta property="og:image" content={articleImage} />
 
   <link rel="stylesheet" href="code.css" />
 </svelte:head>
