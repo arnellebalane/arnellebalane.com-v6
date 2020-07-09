@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const path = require('path');
 const config = require('sapper/config/webpack.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const pkg = require('./package.json');
 
 const mode = process.env.NODE_ENV || 'development';
@@ -11,7 +13,7 @@ const dev = mode === 'development';
 const alias = {
   svelte: path.resolve('node_modules', 'svelte'),
   '@components': path.resolve('src', 'components'),
-  '@lib': path.resolve('src', 'routes', '_lib')
+  '@lib': path.resolve('src', 'routes', '_lib'),
 };
 const extensions = ['.mjs', '.js', '.json', '.svelte', '.html'];
 const mainFields = ['svelte', 'module', 'browser', 'main'];
@@ -30,9 +32,9 @@ module.exports = {
             options: {
               dev,
               hydratable: true,
-              hotReload: false // pending https://github.com/sveltejs/svelte/issues/2377
-            }
-          }
+              hotReload: false, // pending https://github.com/sveltejs/svelte/issues/2377
+            },
+          },
         },
         {
           test: /\.css$/,
@@ -40,14 +42,14 @@ module.exports = {
             {
               loader: MiniCssExtractPlugin.loader,
               options: {
-                hmr: dev
-              }
+                hmr: dev,
+              },
             },
             'css-loader',
-            'postcss-loader'
-          ]
-        }
-      ]
+            'postcss-loader',
+          ],
+        },
+      ],
     },
     mode,
     plugins: [
@@ -58,14 +60,17 @@ module.exports = {
         'process.env': JSON.stringify({
           NODE_ENV: mode,
           BASE_URL: process.env.BASE_URL,
-          CLOUDINARY_BASE_URL: process.env.CLOUDINARY_BASE_URL
-        })
+          CLOUDINARY_BASE_URL: process.env.CLOUDINARY_BASE_URL,
+        }),
       }),
       new MiniCssExtractPlugin({
-        filename: '[hash]/[name].css'
-      })
+        filename: '[hash]/[name].css',
+      }),
     ].filter(Boolean),
-    devtool: dev && 'inline-source-map'
+    devtool: dev && 'inline-source-map',
+    optimization: {
+      minimizer: [new TerserPlugin(), new OptimizeCSSAssetsPlugin()],
+    },
   },
 
   server: {
@@ -83,21 +88,21 @@ module.exports = {
             options: {
               css: false,
               generate: 'ssr',
-              dev
-            }
-          }
-        }
-      ]
+              dev,
+            },
+          },
+        },
+      ],
     },
     mode: process.env.NODE_ENV,
     performance: {
-      hints: false // it doesn't matter if server.js is large
-    }
+      hints: false, // it doesn't matter if server.js is large
+    },
   },
 
   serviceworker: {
     entry: config.serviceworker.entry(),
     output: config.serviceworker.output(),
-    mode: process.env.NODE_ENV
-  }
+    mode: process.env.NODE_ENV,
+  },
 };
