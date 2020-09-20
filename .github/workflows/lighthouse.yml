@@ -25,8 +25,8 @@ jobs:
             https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/about/
             https://deploy-preview-$PR_NUMBER--arnellebalane-v6.netlify.com/blog/async-clipboard-api/
           budgetPath: ./budget.json
-          serverBaseUrl: ${{ secrets.LHCI_SERVER }}
-          serverToken: ${{ secrets.LHCI_TOKEN }}
+          serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
+          serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
 
@@ -41,5 +41,5 @@ jobs:
             https://arnellebalane-v6.netlify.com/about/
             https://arnellebalane-v6.netlify.com/blog/async-clipboard-api/
           budgetPath: ./budget.json
-          serverBaseUrl: ${{ secrets.LHCI_SERVER }}
-          serverToken: ${{ secrets.LHCI_TOKEN }}
+          serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
+          serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
