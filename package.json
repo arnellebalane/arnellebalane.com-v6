@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "2.3.0",
-    "@lhci/cli": "0.4.2",
+    "@lhci/cli": "0.6.0",
     "css-loader": "3.6.0",
     "eslint": "7.12.1",
     "eslint-config-airbnb-base": "14.2.0",
@@ -45,7 +45,7 @@
     "postcss-loader": "3.0.0",
     "prettier": "2.1.2",
     "prettier-plugin-svelte": "1.4.1",
-    "sapper": "0.27.16",
+    "sapper": "0.28.10",
     "shell-quote": "1.7.2",
     "svelte": "3.29.4",
     "svelte-loader": "^2.9.0",
