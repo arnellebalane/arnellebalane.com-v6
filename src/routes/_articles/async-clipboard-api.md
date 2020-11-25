@@ -127,9 +127,9 @@ performs a clipboard-related action such as copy, cut, or paste by listening
 for the `copy`, `cut`, and `paste` events, respectively.
 
 ```js
-document.addEventListener('copy', event => {});
-document.addEventListener('cut', event => {});
-document.addEventListener('paste', event => {});
+document.addEventListener('copy', (event) => {});
+document.addEventListener('cut', (event) => {});
+document.addEventListener('paste', (event) => {});
 ```
 
 These events don't fire when accessing the clipboard using the Async Clipboard
@@ -148,7 +148,7 @@ clipboard, giving us the opportunity to write data in other formats, such as
 `text/html`:
 
 ```js
-document.addEventListener('copy', event => {
+document.addEventListener('copy', (event) => {
   event.preventDefault();
   event.clipboardData.setData('text/plain', 'COPY ME!!!');
   event.clipboardData.setData('text/html', '<p>COPY ME!!!</p>');
@@ -185,7 +185,7 @@ instance of `ClipboardItem` containing our image Blob:
 
 ```js
 new ClipboardItem({
-  'image/png': imageBlob
+  'image/png': imageBlob,
 });
 ```
 
@@ -201,8 +201,8 @@ async function writeToClipboard(imageBlob) {
   try {
     await navigator.clipboard.write([
       new ClipboardItem({
-        'image/png': imageBlob
-      })
+        'image/png': imageBlob,
+      }),
     ]);
   } catch (error) {
     console.error(error);
@@ -274,8 +274,8 @@ async function writeToClipboard(text) {
   try {
     await navigator.clipboard.write([
       new ClipboardItem({
-        'text/plain': new Blob([text], { type: 'text/plain' })
-      })
+        'text/plain': new Blob([text], { type: 'text/plain' }),
+      }),
     ]);
   } catch (error) {
     console.error(error);

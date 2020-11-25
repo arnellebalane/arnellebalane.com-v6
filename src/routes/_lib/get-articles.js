@@ -14,7 +14,7 @@ marked.setOptions({
     } catch (error) {
       return code;
     }
-  }
+  },
 });
 
 // process.cwd() will _usually_ point to the project's root directory.
@@ -28,7 +28,7 @@ export default async function getArticles() {
     const fileNames = await fs.readdir(articlesDir);
 
     articles = await Promise.all(
-      fileNames.map(async fileName => {
+      fileNames.map(async (fileName) => {
         const filePath = path.join(articlesDir, fileName);
         const fileContent = await fs.readFile(filePath, 'utf8');
         const slug = fileName.replace(/\.md$/, '');
@@ -38,9 +38,9 @@ export default async function getArticles() {
             ...pick(extracted.attributes, ['title', 'description', 'categories', 'cover_image']),
             date: dayjs(extracted.attributes.date).format('YYYY-MM-DD'),
             url: `/blog/${slug}`,
-            slug
+            slug,
           },
-          html: optimizeHtmlImages(marked(extracted.body))
+          html: optimizeHtmlImages(marked(extracted.body)),
         };
         return article;
       })

@@ -1,13 +1,13 @@
 <script context="module">
   export async function preload() {
     const [featuredProjects, otherProjects] = await Promise.all([
-      this.fetch('api/featured-projects.json').then(response => response.json()),
-      this.fetch('api/projects.json').then(response => response.json())
+      this.fetch('api/featured-projects.json').then((response) => response.json()),
+      this.fetch('api/projects.json').then((response) => response.json()),
     ]);
 
     return {
       featuredProjects: featuredProjects.slice(0, 2),
-      otherProjects: otherProjects.slice(0, 6)
+      otherProjects: otherProjects.slice(0, 6),
     };
   }
 </script>

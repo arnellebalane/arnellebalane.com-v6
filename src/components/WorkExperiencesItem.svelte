@@ -8,10 +8,7 @@
 </script>
 
 <div class="flex flex-col px-6 py-5 pb-3 bg-gray-100 rounded">
-  <h1 class="text-xl font-black">
-    {experience.position},
-    <span class="font-normal">{experience.company}</span>
-  </h1>
+  <h1 class="text-xl font-black">{experience.position}, <span class="font-normal">{experience.company}</span></h1>
   <p class="mb-6 font-mono text-sm text-gray-700">{startDate} - {endDate}</p>
 
   <ul class="list-disc list-inside">

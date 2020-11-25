@@ -52,7 +52,8 @@
         target={article.source ? '_blank' : ''}
         rel={article.source ? 'noopener noreferrer' : ''}
       >
-        Read more {formatSource(article.source)}
+        Read more
+        {formatSource(article.source)}
       </a>
     </footer>
   </div>

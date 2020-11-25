@@ -5,12 +5,12 @@ export async function get(req, res) {
   const entries = await contentful.getEntries({
     order: '-fields.date',
     content_type: 'project',
-    'fields.is_featured': true
+    'fields.is_featured': true,
   });
 
   const data = entries.items.map(({ fields }) => ({
     ...pick(fields, ['name', 'description', 'url', 'repository', 'tags']),
-    image: fields.image.fields.file.url
+    image: fields.image.fields.file.url,
   }));
 
   res.setHeader('Content-Type', 'application/json');

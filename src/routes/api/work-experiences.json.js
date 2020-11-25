@@ -4,7 +4,7 @@ import contentful from '@lib/contentful';
 export async function get(req, res) {
   const entries = await contentful.getEntries({
     order: '-fields.startDate',
-    content_type: 'workExperience'
+    content_type: 'workExperience',
   });
 
   const data = entries.items.map(({ fields }) =>

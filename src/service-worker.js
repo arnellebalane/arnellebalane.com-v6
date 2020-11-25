@@ -6,7 +6,7 @@ const ASSETS = `cache${timestamp}`;
 // `files` is an array of everything in the `static` directory
 
 // Exclude non-subsetted fonts from being cached in the service worker.
-const filesWithoutRawFonts = files.filter(file => {
+const filesWithoutRawFonts = files.filter((file) => {
   if (!file.startsWith('fonts')) {
     return true;
   }
@@ -16,22 +16,22 @@ const filesWithoutRawFonts = files.filter(file => {
 const toCache = shell.concat(filesWithoutRawFonts);
 const cached = new Set(toCache);
 
-addEventListener('install', event => {
+addEventListener('install', (event) => {
   event.waitUntil(
     caches
       .open(ASSETS)
-      .then(cache => cache.addAll(toCache))
+      .then((cache) => cache.addAll(toCache))
       .then(() => {
         skipWaiting();
       })
   );
 });
 
-addEventListener('activate', event => {
+addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then(async keys => {
+    caches.keys().then(async (keys) => {
       // delete old caches
-      const promises = keys.filter(key => key !== ASSETS).map(key => caches.delete(key));
+      const promises = keys.filter((key) => key !== ASSETS).map((key) => caches.delete(key));
       await Promise.all(promises);
 
       clients.claim();
@@ -39,7 +39,7 @@ addEventListener('activate', event => {
   );
 });
 
-addEventListener('fetch', event => {
+addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET' || event.request.headers.has('range')) return;
 
   const url = new URL(event.request.url);
@@ -72,7 +72,7 @@ addEventListener('fetch', event => {
   // cache if the user is offline. (If the pages never change, you
   // might prefer a cache-first approach to a network-first one.)
   event.respondWith(
-    caches.open(`offline${timestamp}`).then(async cache => {
+    caches.open(`offline${timestamp}`).then(async (cache) => {
       try {
         const response = await fetch(event.request);
         cache.put(event.request, response.clone());

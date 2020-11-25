@@ -14,8 +14,8 @@
   export let events = [];
 
   const now = new Date();
-  const upcomingEvents = events.filter(event => new Date(event.date) >= now);
-  const pastEvents = events.filter(event => new Date(event.date) < now);
+  const upcomingEvents = events.filter((event) => new Date(event.date) >= now);
+  const pastEvents = events.filter((event) => new Date(event.date) < now);
 </script>
 
 <svelte:head>

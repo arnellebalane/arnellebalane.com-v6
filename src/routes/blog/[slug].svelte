@@ -37,7 +37,7 @@
     function shareArticle() {
       const UNSUPPORTED_WEB_SHARE_ERROR = 'Internal error: could not connect to Web Share interface.';
 
-      navigator.share({ text: document.title, title: document.title, url }).catch(error => {
+      navigator.share({ text: document.title, title: document.title, url }).catch((error) => {
         if (error.message === UNSUPPORTED_WEB_SHARE_ERROR) {
           tweetArticle();
         }

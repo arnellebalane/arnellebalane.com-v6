@@ -8,7 +8,7 @@
     { label: 'Blog', href: 'blog' },
     { label: 'Events', href: 'events' },
     { label: 'Projects', href: 'projects' },
-    { label: 'About', href: 'about' }
+    { label: 'About', href: 'about' },
   ];
 
   let menuOpen = false;

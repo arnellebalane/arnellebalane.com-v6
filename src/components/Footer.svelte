@@ -3,33 +3,33 @@
     {
       name: 'Github',
       icon: '/icons/github.svg',
-      url: 'https://github.com/arnellebalane'
+      url: 'https://github.com/arnellebalane',
     },
     {
       name: 'Twitter',
       icon: '/icons/twitter.svg',
-      url: 'https://twitter.com/arnellebalane'
+      url: 'https://twitter.com/arnellebalane',
     },
     {
       name: 'LinkedIn',
       icon: '/icons/linkedin.svg',
-      url: 'https://www.linkedin.com/in/arnellebalane/'
+      url: 'https://www.linkedin.com/in/arnellebalane/',
     },
     {
       name: 'Instagram',
       icon: '/icons/instagram.svg',
-      url: 'https://www.instagram.com/arnellebalane/'
+      url: 'https://www.instagram.com/arnellebalane/',
     },
     {
       name: 'DEV',
       icon: '/icons/devto.svg',
-      url: 'https://dev.to/arnellebalane'
+      url: 'https://dev.to/arnellebalane',
     },
     {
       name: 'Codepen',
       icon: '/icons/codepen.svg',
-      url: 'https://codepen.io/arnellebalane'
-    }
+      url: 'https://codepen.io/arnellebalane',
+    },
   ];
 </script>
 

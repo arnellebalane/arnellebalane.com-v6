@@ -5,7 +5,7 @@ export async function get(req, res) {
   const entries = await contentful.getEntries({
     order: '-fields.date',
     content_type: 'project',
-    'fields.is_featured': false
+    'fields.is_featured': false,
   });
 
   const data = entries.items.map(({ fields }) => pick(fields, ['name', 'description', 'repository', 'tags']));
