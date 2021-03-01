@@ -19,7 +19,7 @@
     "dotenv": "8.2.0",
     "lodash": "4.17.20",
     "polka": "0.5.2",
-    "prismjs": "1.22.0",
+    "prismjs": "1.23.0",
     "quicklink": "2.0.0",
     "sirv": "1.0.7",
     "tailwindcss": "1.9.6"
