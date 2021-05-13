@@ -1,14 +1,10 @@
 <script context="module">
   export async function preload() {
-    const [featuredProjects, otherProjects] = await Promise.all([
-      this.fetch('api/featured-projects.json').then((response) => response.json()),
-      this.fetch('api/projects.json').then((response) => response.json()),
-    ]);
+    const projects = await this.fetch('api/projects.json').then((response) => response.json());
+    const featuredProjects = projects.filter((project) => project.is_featured).slice(0, 2);
+    const otherProjects = projects.filter((project) => !project.is_featured).slice(0, 6);
 
-    return {
-      featuredProjects: featuredProjects.slice(0, 2),
-      otherProjects: otherProjects.slice(0, 6),
-    };
+    return { featuredProjects, otherProjects };
   }
 </script>
 

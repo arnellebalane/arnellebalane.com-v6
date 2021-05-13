@@ -1,4 +1,5 @@
 import pick from 'lodash/pick';
+import _get from 'lodash/get';
 import contentful from '@lib/contentful';
 
 export async function get(req, res) {
@@ -7,7 +8,10 @@ export async function get(req, res) {
     content_type: 'project',
   });
 
-  const data = entries.items.map(({ fields }) => pick(fields, ['name', 'description', 'repository', 'tags']));
+  const data = entries.items.map(({ fields }) => ({
+    ...pick(fields, ['name', 'description', 'url', 'repository', 'tags', 'is_featured']),
+    image: _get(fields, 'image.fields.file.url'),
+  }));
 
   res.setHeader('Content-Type', 'application/json');
   res.end(JSON.stringify(data));
