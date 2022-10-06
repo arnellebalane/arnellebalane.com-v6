@@ -3,13 +3,13 @@ layout: layouts/article.njk
 title: "Let's build a video calling app! - Part One"
 description: >
   This article shows the concepts and process behind building a video calling
-  app using Web technologies and Firebase
+  app using Web technologies
 categories:
   - javascript
   - web-development
   - web-api
 tags: article
-date: 2022-10-02
+date: 2022-10-06
 published: true
 ---
 
@@ -143,7 +143,7 @@ Now let's say you want to initiate a call to your friend. The flow is going to b
    // to be continued in the next step...
    ```
 
-2. You then send your offer to your friend through the signaling mechanism.
+1. You then send your offer to your friend through the signaling mechanism.
 
    ```js
    // YOU
@@ -153,7 +153,7 @@ Now let's say you want to initiate a call to your friend. The flow is going to b
    });
    ```
 
-3. Your friend then receives your offer through the signaling mechanism.
+1. Your friend then receives your offer through the signaling mechanism.
 
    ```js
    // YOUR FRIEND
@@ -165,7 +165,7 @@ Now let's say you want to initiate a call to your friend. The flow is going to b
    });
    ```
 
-4. Your friend then creates their own `RTCPeerConnection` object and sets your offer as their remote peer.
+1. Your friend then creates their own `RTCPeerConnection` object and sets your offer as their remote peer.
 
    ```js
    // YOUR FRIEND
@@ -174,7 +174,7 @@ Now let's say you want to initiate a call to your friend. The flow is going to b
    // to be continued in the next step...
    ```
 
-5. Your friend then creates what we call an **answer** (which again is simply the SDP describing their browser's capabilities and ICE candidates) and sets it as the local peer in their `RTCPeerConnection` object.
+1. Your friend then creates what we call an **answer** (which again is simply the SDP describing their browser's capabilities and ICE candidates) and sets it as the local peer in their `RTCPeerConnection` object.
 
    ```js
    // YOUR FRIEND
@@ -183,7 +183,7 @@ Now let's say you want to initiate a call to your friend. The flow is going to b
    // to be continued in the next step...
    ```
 
-6. Your friend then sends their answer to you through the signaling mechanism.
+1. Your friend then sends their answer to you through the signaling mechanism.
 
    ```js
    // YOUR FRIEND
@@ -193,7 +193,7 @@ Now let's say you want to initiate a call to your friend. The flow is going to b
    });
    ```
 
-7. Finally, you then receive your friend's answer through the signaling mechanism and set it as the remote peer in your `RTCPeerConnection` object.
+1. Finally, you then receive your friend's answer through the signaling mechanism and set it as the remote peer in your `RTCPeerConnection` object.
 
    ```js
    // YOU

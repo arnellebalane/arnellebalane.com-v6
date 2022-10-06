@@ -108,15 +108,19 @@
   @apply overflow-hidden;
 }
 
-.article ul {
+.article ul,
+.article ol {
   @apply mb-16;
   @apply pl-8;
 }
 
 .article li {
   @apply my-4;
-  @apply list-disc;
   @apply list-inside;
+}
+
+.article ul li {
+  @apply list-disc;
 }
 
 @screen md {
