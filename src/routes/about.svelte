@@ -23,12 +23,8 @@
     <h1 class="mb-6 text-2xl sm:text-3xl font-black">About Me</h1>
 
     <p class="mb-6">
-      Hello! I'm Arnelle, a software developer based in Cebu, Philippines. I enjoy building things using good old HTML,
-      CSS, JavaScript, and Web Platform APIs.
-    </p>
-    <p class="mb-6">
-      I'm a Google Developers Expert in Web Technologies, and an active volunteer and speaker for local tech
-      communities, giving talks and conducting workshops about various technical topics.
+      Hello! I'm Arnelle, a software developer based in Vancouver. I enjoy building things using good old HTML, CSS,
+      JavaScript, and Web Platform APIs.
     </p>
     <p>
       When not busy experimenting with new Web APIs, I like to spend my time taking photos, playing video games, or
@@ -67,10 +63,9 @@
 
     <div class="max-w-xl mb-5">
       <p>
-        Arnelle is a Web developer from Cebu, Philippines and a Google Developers Expert for Web Technologies who enjoys
-        building things with good old HTML, CSS, JavaScript, and Web Platform APIs. He is an active volunteer and
-        speaker for GDG Cebu and other local JavaScript communities. When not busy experimenting with new Web APIs, he
-        can also be seen taking photos, playing video games, or practicing his card tricks.
+        Arnelle is a Web developer from Vancouver who enjoys building things with good old HTML, CSS, JavaScript, and
+        Web Platform APIs. When not busy experimenting with new Web APIs, he can also be seen taking photos, playing
+        video games, or practicing his card tricks.
       </p>
       <a
         href="/arnelle-avatar.jpg"

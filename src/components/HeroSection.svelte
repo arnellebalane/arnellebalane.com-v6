@@ -17,11 +17,7 @@
     <h1 class="text-3xl sm:text-4xl md:text-5xl font-black mb-8">Arnelle Balane</h1>
 
     <p class="mb-4">
-      I'm a software developer based in Cebu, Philippines focused on building fast and high-quality Web applications.
-    </p>
-    <p class="mb-4">
-      I'm also a Google Developers Expert for Web Technologies, passionate in sharing about and showing how awesome the
-      Web platform is.
+      I'm a software developer based in Vancouver focused on building fast and high-quality Web applications.
     </p>
   </div>
 </section>
